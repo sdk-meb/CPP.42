@@ -1,14 +1,14 @@
-NAME = phonebook
+NAME = BraiiiiiiinnnzzzZ
 
 CC = c++
+
+INC= '-I$(shell PWD)'
 
 RED = \033[0;31m
 GREEN = \033[0;32m
 NO_COLOR = \033[0m
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98  # __Formatting__and__namin__conventions__
-
-INC= '-I$(shell PWD)'
+CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
 SRC_FILES = $(shell ls *.cpp)
 

@@ -13,11 +13,10 @@ public:
     Contact(){/* empty CONSTRUCTOR */
         name = "";
         number = "";
-    } 
-    ~Contact(){return ;}; /* DECONSTRUCTOR*/
-    void  add_name(Contact *con, std::string name);
-    void  add_num(Contact *con, std::string num);
-    std::string get_info(Contact con, int info);
+    }
+    void  add_name(std::string name);
+    void  add_num(std::string num);
+    std::string get_info(int info);
 };
 
 # endif

@@ -12,13 +12,15 @@ CODE_FILE = $(shell ls *.cpp)
 
 OBJ_FILES = $(CODE_FILE:.cpp=.opp)
 
+INC= '-I$(shell pwd)'
+
 %.opp:%.cpp
-	@${CC} ${CFLAGS} -o $@ -c $<
+	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}
 
 $(NAME): ${OBJ_FILES}
-	@${CC} ${CFLAGS} ${OBJ_FILES} -o ${NAME}
+	@${CC} ${CFLAGS} ${INC} ${OBJ_FILES} -o ${NAME}
 	@echo "${GREEN} • Now you can run the exucitable file ./${NAME}${NO_COLOR}"
 
 clean:

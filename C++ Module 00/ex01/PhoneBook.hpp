@@ -12,10 +12,9 @@ private:
 public:
     PhoneBook(bool init=1); /* parameters CONSTURCTOR */
     ~PhoneBook(){return ;}; /*  DECONSTRUCTOR  */
-    void add_contact(PhoneBook *myphone
-    , std::string name, std::string num, int c);
-    void    reset_contact(PhoneBook *myphone, int c);
-    void    print_contact(PhoneBook myphone, int c);
+    void add_contact(std::string name, std::string num, int c);
+    void    reset_contact(int c);
+    void    print_contact(int c);
 };
 
 # endif
