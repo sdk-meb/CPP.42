@@ -7,7 +7,7 @@ int main()
 
     N = 4;
 
-    mobs = zombieHorde(N, "BraizzZ");
+    mobss = zombieHorde(N, "BraizzZ");
     if (mobs)
         delete mobs;
     return 0;
