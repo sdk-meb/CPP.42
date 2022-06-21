@@ -4,10 +4,10 @@ int main(){
     Zombie zombie;
     Zombie* zmb;
 
-    zmb = zombie.newZombie("gogo");
+    zmb = newZombie("gogo");
     zmb->announce();
     delete zmb;
 
-    zombie.randomChump("he");
+    randomChump("pink");
     return 0;
 }

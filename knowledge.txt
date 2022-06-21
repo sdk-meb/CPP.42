@@ -2,8 +2,11 @@
 
 # ./meaning
 
-        Constructor overloading:  multiple constructors function for one class
-                        They are distinguished from each other by 
+        
+
+
+		(f)>(Constructor) overloading:  multiple (f)>(constructors) function for one class
+                        They are distinguished from each other by
                         the number of parameters
         ~Destructor : Constructor without tilde 😅 + no prameters 
         :: scope reseliation 

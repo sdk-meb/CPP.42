@@ -1,8 +1,7 @@
-#ifndef _ZOMBIE_H_
-# define _ZOMBIE_H_
+#ifndef _MOAR_BRAINZ_H_
+# define _MOAR_BRAINZ_H_
 
 #include <iostream>
-
 
 class Zombie {
 
@@ -14,7 +13,6 @@ public:
     void    Zombieset(std::string name){this->name = name;};
 };
 
-Zombie* newZombie( std::string name);
-void    randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name );
 
-#endif
+# endif
