@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue Jun 21 18:02:29 2022
+# Make data base, printed on Wed Jun 22 12:38:33 2022
 
 # Variables
 
@@ -39,11 +39,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-d245a701-3672-437b-b2a0-fe11e3114a08.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-bb7aa743-2cfe-4785-a054-3111420e59cc.sock
 # environment
 VSCODE_CWD = /Users/mes-sadk/Desktop/cpp.42/C++ Module 01
 # environment
-PATH = /Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
+PATH = /Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -53,7 +53,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HM05XJUcHg/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ZjaQn5aozJ/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -75,7 +75,7 @@ VSCODE_CODE_CACHE_PATH = /Users/mes-sadk/Library/Application Support/Code/Cached
 # environment
 LOGNAME = mes-sadk
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 ZSH = /Users/mes-sadk/.oh-my-zsh
 # environment
@@ -101,7 +101,7 @@ USER = mes-sadk
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t0p0:B106BB88-2090-4CF8-9F07-674C953AC59C
+TERM_SESSION_ID = w0t0p0:F35D1684-B31E-4AB8-8FDD-F30D6EC7ED28
 # environment
 LESS = -R
 # automatic
@@ -135,11 +135,11 @@ LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:B106BB88-2090-4CF8-9F07-674C953AC59C
+ITERM_SESSION_ID = w0t0p0:F35D1684-B31E-4AB8-8FDD-F30D6EC7ED28
 # environment
 COLORFGBG = 7;0
 # environment
-__CF_USER_TEXT_ENCODING = 0x18C24:0:0
+__CF_USER_TEXT_ENCODING = 0x18C24:0x0:0x0
 # default
 MAKEFILES := 
 # environment
@@ -165,7 +165,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 3860
+VSCODE_PID = 2164
 # variable set hash-table stats:
 # Load=77/1024=8%, Rehash=0, Collisions=4/98=4%
 
@@ -175,9 +175,9 @@ VSCODE_PID = 3860
 
 # Directories
 
-# . (device 16777225, inode 4163446): 6 files, no impossibilities.
+# . (device 16777225, inode 4208595): 9 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -249,7 +249,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue Jun 21 18:02:29 2022
+# Finished Make data base on Wed Jun 22 12:38:33 2022
 
  
 make: *** No rule to make target `all'.  Stop.

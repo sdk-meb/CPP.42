@@ -1,6 +1,8 @@
 {
     "makefile.extensionOutputFolder": "./.vscode",
     "C_Cpp.errorSquiggles": "Disabled",
+    "editor.rulers": [80],
+    "editor.lineNumbers": "relative",
     "files.associations": {
         "iosfwd": "cpp",
         "__bit_reference": "cpp",
@@ -51,6 +53,7 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "iomanip": "cpp"
     }
 }

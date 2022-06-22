@@ -5,7 +5,7 @@ Zombie* zombieHorde( int N, std::string name ){
 
     if (N < 1)
         return NULL;
-    mobs = new Zombie[N + 1];
+    mobs = new Zombie[N];
     do
     {
         mobs[N].Zombieset(name);
