@@ -5,10 +5,11 @@
         
 
 
-		(f)>(Constructor) overloading:  multiple (f)>(constructors) function for one class
+	(f)>(Constructor) overloading:  multiple (f)>(constructors) function for one class
                         They are distinguished from each other by
                         the number of parameters
-        ~Destructor : Constructor without tilde 😅 + no prameters 
+        ~Destructor : Constructor without tilde 😅 + no prameters
+                         Calling in the last possibilities to use </this>
         :: scope reseliation 
 
 ***********************  put with colour in a terminal *************************
@@ -45,4 +46,5 @@ D           Light Gray     0;37      |      White           1;37
      e.g.   for the sake of examples 
 
   __An -> lvalue refers to an object that persists beyond a single expression. 
-  __An -> rvalue is a temporary value that does not persist beyond the expression that uses it.
+  __An -> rvalue is a temporary value that does not persist beyond
+                        the expression that uses it.

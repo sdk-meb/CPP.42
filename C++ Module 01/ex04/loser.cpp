@@ -8,31 +8,34 @@ void sed(std::string file, std::string s1, std::string s2){
     char* new_file = const_cast<char*>(file.c_str());;
 
     std::strcat(new_file, ".replace");
-    s1[0] = s2[0];
+    s2[1] = s2[0];
 
     if (ifs.is_open() == false) 
         return ;
 
     std::ofstream ofs(new_file);
     do{
+        std::string s;
         i = 0;
-
-        c = ifs.get();
-        if (c == EOF)
-            break ;
-        switch (1)
-        {
-            case (1):{
-            do{
-                c = ifs.get();
-                  //  if (c == EOF)
-
-                }  while (ifs.eof() == false);
+        do{
+            c = ifs.get();
+            if (c == EOF){
+                break ;
             }
-        default:
+            s += c;
+            i++;
+        }  while ((s1[i] || !s1[0]) && ifs.eof() == false);
+    
+    switch (s1.compare(s)){
+        case false:{
+            ofs  << s2;
             break;
         }
-        ofs  << c;
+        default:{
+            ofs  << s;
+            break;
+        }
+    }
 
     } while (ifs.eof() == false);
 
