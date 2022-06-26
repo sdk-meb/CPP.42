@@ -5,7 +5,11 @@ int main(){
 
     Harl _harl;
 
-    (_harl.*Cfptr) ("ERROR");
+    (_harl.* Cfptr) ("DEBUG");
+    (_harl.* Cfptr) ("INFO");
+    (_harl.* Cfptr) ("WARNING");
+    (_harl.* Cfptr) ("ERROR");
+
 
     return 0;
 }

@@ -10,7 +10,6 @@ class Harl{
     std::string INFOm;
     std::string WARNINGm;
     std::string ERRORm;
-
     enum comments {eDEBUG, eINFO, eWARNING, eERROR};
 
 public:

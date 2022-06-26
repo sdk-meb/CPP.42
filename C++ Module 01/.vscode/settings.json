@@ -4,7 +4,6 @@
     "editor.rulers": [80],
     "editor.lineNumbers": "relative",
     "files.associations": {
-        "iosfwd": "cpp",
         "__bit_reference": "cpp",
         "__config": "cpp",
         "__debug": "cpp",
@@ -35,6 +34,7 @@
         "functional": "cpp",
         "initializer_list": "cpp",
         "ios": "cpp",
+        "iosfwd": "cpp",
         "iostream": "cpp",
         "istream": "cpp",
         "iterator": "cpp",
@@ -53,7 +53,6 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp",
-        "iomanip": "cpp"
+        "utility": "cpp"
     }
 }

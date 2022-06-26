@@ -15,19 +15,19 @@ Harl::Harl(){
 /**************************__ members function __******************************/
 
 void Harl::debug   ( void ){
-    std::cout << DEBUGm << std::endl;
+    std::cout << "[ DEBUG ]\n" << DEBUGm << std::endl ;
 }
 
 void Harl::info    ( void ){
-    std::cout << INFOm << std::endl;
+    std::cout << "[ INFO ]\n" << INFOm << std::endl ;
 }
 
 void Harl::warning ( void ){
-    std::cout << WARNINGm << std::endl;
+    std::cout << "[ WARNING ]\n" << WARNINGm << std::endl ;
 }
 
 void Harl::error   ( void ){
-    std::cout << ERRORm << std::endl;
+    std::cout << "[ ERROR ]\n" << ERRORm << std::endl ;
 }
 
 int getlevel(std::string level)
@@ -39,40 +39,35 @@ int getlevel(std::string level)
         switch ((level == lvls[i]) + i - i)
         {
             case true:
-                return (i + 1);
+                return (i);
             default:
                 break;
         }
 
     }   while (i--);
 
-    return (0);
+    return (-1);
 }
 
 void Harl::complain( std::string level ){
 
      // declare pointers for data member
+    void (Harl::* Dfptr) (void) = &Harl::debug;
+    void (Harl::* Ifptr) (void) = &Harl::info;
+    void (Harl::* Wfptr) (void) = &Harl::warning;
+    void (Harl::* Efptr) (void) = &Harl::error;
     const comments msg = eDEBUG;
-    std::cout  <<  "_____\n";
-    // void (*Dfptr) (void) = &Harl::debug;
-    // void (*Ifptr) (void) = &Harl::info;
-    // void (*Wfptr) (void) = &Harl::warning;
-    // void (*Efptr) (void) = &Harl::error;
 
     switch (getlevel( level ))
     {
         case msg:
-           // Dfptr();
-            break;
+            return (*this.*Dfptr)();
         case msg + 1:
-            info();
-            break;
+            return (*this.*Ifptr)();
         case msg + 2:
-            warning();
-            break;
+            return (*this.*Wfptr)();
         case msg + 3:
-            error();
-            break;
+            return (*this.*Efptr)();
         default:
             break;
     };

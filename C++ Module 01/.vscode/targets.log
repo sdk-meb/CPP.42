@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Jun 25 15:58:15 2022
+# Make data base, printed on Sun Jun 26 20:21:14 2022
 
 # Variables
 
@@ -41,7 +41,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-7331b74b-57e7-4ec4-8463-e891caad88e4.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-e8111fd3-0b12-4840-aa38-b8e6d001c8e2.sock
 # environment
 VSCODE_CWD = /Users/mes-sadk/Desktop/cpp.42/C++ Module 01
 # environment
@@ -55,11 +55,9 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1bppNQEAps/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1KjPyj0cbZ/Listeners
 # automatic
 %F = $(notdir $%)
-# environment
-SQLITE_EXEMPT_PATH_FROM_VNODE_GUARDS = /Users/mes-sadk/Library/WebKit/Databases
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -71,7 +69,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/mes-sadk
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
 VSCODE_CLI = 1
 # environment
@@ -111,7 +109,7 @@ LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # environment
 TERM_PROGRAM = iTerm.app
 # default
@@ -169,9 +167,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 5582
+VSCODE_PID = 87925
 # variable set hash-table stats:
-# Load=78/1024=8%, Rehash=0, Collisions=4/99=4%
+# Load=77/1024=8%, Rehash=0, Collisions=4/98=4%
 
 # Pattern-specific Variable Values
 
@@ -179,9 +177,9 @@ VSCODE_PID = 5582
 
 # Directories
 
-# . (device 16777225, inode 4208595): 10 files, no impossibilities.
+# . (device 16777225, inode 4208595): 12 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -253,6 +251,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sat Jun 25 15:58:15 2022
+# Finished Make data base on Sun Jun 26 20:21:14 2022
 
  
