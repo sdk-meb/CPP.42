@@ -3,6 +3,6 @@
 
 void    HumanA::attack(){
 
-    std::cout << this->name << " attacks with their "
-    << this->wpn.getType() << std::endl;
+    std::cout << name << " attacks with their "
+    << wpn->getType() << std::endl;
 }

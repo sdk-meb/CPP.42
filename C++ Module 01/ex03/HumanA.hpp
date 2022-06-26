@@ -6,14 +6,14 @@
 
 class HumanA{
 
-    Weapon wpn;
+    Weapon* wpn;
     std::string name;
 
 public:
 
-    HumanA(std::string name, Weapon wpn){
+    HumanA(std::string name, Weapon& wpn){
         this->name = name;
-        this->wpn = wpn;
+        this->wpn = &wpn;
     }
     void    attack();
 

@@ -6,16 +6,17 @@
 
 class HumanB{
 
-    Weapon wpn;
+    Weapon* wpn;
     std::string name;
 
 public:
 
-    HumanB(std::string name=""){
+    HumanB(std::string name){
         this->name = name;
+        wpn = NULL;
     }
     void attack();
-    void    setWeapon(Weapon wpn);
+    void    setWeapon(Weapon& wpn);
 
 };
 
