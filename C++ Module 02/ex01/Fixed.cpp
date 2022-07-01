@@ -1,60 +1,63 @@
 # include<Fixed.hpp>
 
 /* *************************** ___CONSTRUCTRS___ *********************************/
-Fixed::Fixed(const int cint){
+Fixed::Fixed( const int cint){
     std::cout << "Default constructor called" << cint<< std::endl;
-    fixe_piont = cint;
+    fixe_point = cint << this->fraction_8;
 }
-Fixed::Fixed(const float cflt){
-    int i = -1;
+Fixed::Fixed( const float cflt){
     
-    
-    
-
-    this->fixe_piont = 0;
-
+   this->fixe_point = (int)roundf(cflt * (1 << this->fraction_8));
 }
 Fixed::Fixed(const Fixed& fix){
     std::cout << "Copy constructor called" << std::endl;
 
-    this->fixe_piont = fix.fixe_piont;
+    this->fixe_point = fix.fixe_point;
+    //*this = fix;
+    //this->fixe_point = fix.getRawBits();
 }
 
 /* ********************** _COPY_ASSIGNMENT_OPERATOR_ *****************************/
 Fixed& Fixed::operator=(const Fixed& fix){
     std::cout << "Copy assignment operator called" << std::endl;
 
-    this->fixe_piont = fix.fixe_piont;
+    this->fixe_point = fix.fixe_point;//this->fixe_point = fix.getRawBits();
     return *this;
 }
 /********************************__<<_OPERATOR__**********************************/
 std::ostream& operator<<(std::ostream& os, const Fixed& cfix)
 {
-    bool    signe = (cfix.fixe_piont << 31 != 1);// get the bit of signe
-    int     exponent = cfix.fixe_piont >> 1;// disposal the bit of signe from IEEE-754 
-    int     mantissa = exponent >> 9;
-    exponent <<= 23;
-    mantissa <<= 9;
-    /*cast if you wont with number of bits (int8_t, ...)*/
-
-    os << (signe ? '-':'+') << exponent << '.' << mantissa;
+    os << cfix.toFloat();
     return os;
 }
 
 /* *********************** ___others_member_function__ ***************************/
-int Fixed::toInt( void ) const{
-  //  std::cout << "getRawBits member function called" << std::endl;
 
-    return fixe_piont;
+int Fixed::getRawBits(void) const{
+
+	std::cout << "getRawBits called" << std::endl;
+	return this->fixe_point;
+}
+
+void Fixed::setRawBits(int pint){
+
+	std::cout << "setRawBits called" << std::endl;
+	this->fixe_point = pint;
+}
+
+int Fixed::toInt( void ) const{
+  //  std::cout << "toInt member function called" << std::endl;
+
+    return (int)this->fixe_point >> this->fraction_8 ;
 }
 
 float Fixed::toFloat( void ) const{
-  //  std::cout << "setRawBits member function called" << std::endl;
-
-    return 0.1;
+  //  std::cout << "toFloat member function called" << std::endl;
+    return (float)this->fixe_point / ( 1 << this->fraction_8 );
 }
 
 /************************** __DESTRUCTOR__ ***************************************/
 Fixed::~Fixed(){
     std::cout << "Destructor called" << std::endl;
 }
+ 

@@ -7,8 +7,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Wed Jun 29 16:01:10 2022
+
+# Make data base, printed on Fri Jul  1 18:54:43 2022
 
 # Variables
 
@@ -39,7 +41,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-116a6d13-2167-40df-bf64-495cb0a5482e.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-698dbdf0-a355-484a-8784-43ba4e1d83b8.sock
 # environment
 VSCODE_CWD = /Users/mes-sadk/Desktop/cpp.42/C++ Module 02
 # environment
@@ -53,7 +55,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.BOkAyZHk2j/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.7Rit8wa3cp/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -101,7 +103,7 @@ USER = mes-sadk
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t0p0:C8E22872-68F2-4A4B-9806-EB10EFA6F047
+TERM_SESSION_ID = w0t0p0:F9718071-FE24-443C-B8B0-27F41875A909
 # environment
 LESS = -R
 # automatic
@@ -135,7 +137,7 @@ LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:C8E22872-68F2-4A4B-9806-EB10EFA6F047
+ITERM_SESSION_ID = w0t0p0:F9718071-FE24-443C-B8B0-27F41875A909
 # environment
 COLORFGBG = 7;0
 # environment
@@ -165,7 +167,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 18591
+VSCODE_PID = 1466
 # variable set hash-table stats:
 # Load=77/1024=8%, Rehash=0, Collisions=4/98=4%
 
@@ -249,8 +251,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Jun 29 16:01:10 2022
+# Finished Make data base on Fri Jul  1 18:54:43 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-
