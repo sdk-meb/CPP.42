@@ -68,6 +68,7 @@ float   s eeeeeeee mmmmmmmmmmmmmmmmmmmmmmm    meaning
 
         base 2 : value = signe * mantisse * 10^(± exposant real)
         base 10 :  value = signe * mantisse * 2^(± exposant real)
+
 signal --> A slot is a function that is called in response to a particular signal.
 
 

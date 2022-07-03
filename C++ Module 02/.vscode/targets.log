@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Fri Jul  1 18:54:43 2022
+# Make data base, printed on Sun Jul  3 07:12:05 2022
 
 # Variables
 
@@ -41,13 +38,15 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-698dbdf0-a355-484a-8784-43ba4e1d83b8.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-ee0c8f54-82dd-4cbe-a826-89cf0ceedfb1.sock
 # environment
-VSCODE_CWD = /Users/mes-sadk/Desktop/cpp.42/C++ Module 02
+VSCODE_CWD = /Users/mes-sadk
 # environment
 PATH = /Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+LaunchInstanceID = C2FE1012-63D5-44FB-B7C3-5D8347B00456
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -55,7 +54,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.7Rit8wa3cp/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.m2X8aLgLDZ/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -103,7 +102,7 @@ USER = mes-sadk
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t0p0:F9718071-FE24-443C-B8B0-27F41875A909
+TERM_SESSION_ID = w0t0p0:624C196C-CCE8-4CD9-9F2B-B31E8E730E68
 # environment
 LESS = -R
 # automatic
@@ -137,11 +136,13 @@ LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:F9718071-FE24-443C-B8B0-27F41875A909
+ITERM_SESSION_ID = w0t0p0:624C196C-CCE8-4CD9-9F2B-B31E8E730E68
 # environment
 COLORFGBG = 7;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x18C24:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # environment
@@ -154,6 +155,8 @@ ITERM_PROFILE = Default
 PAGER = less
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186c3
 # automatic
 ^F = $(notdir $^)
 # default
@@ -167,9 +170,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 1466
+VSCODE_PID = 55389
 # variable set hash-table stats:
-# Load=77/1024=8%, Rehash=0, Collisions=4/98=4%
+# Load=80/1024=8%, Rehash=0, Collisions=4/101=4%
 
 # Pattern-specific Variable Values
 
@@ -251,6 +254,8 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Jul  1 18:54:43 2022
+# Finished Make data base on Sun Jul  3 07:12:05 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+

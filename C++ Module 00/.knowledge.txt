@@ -3,7 +3,8 @@
 # ./meaning
 
         
-
+        APIs are mechanisms that enable two software components
+                to communicate with each other using a set of definitions and protocols.
 
 		(f)>(Constructor) overloading:  multiple (f)>(constructors) function for one class
                         They are distinguished from each other by
@@ -46,3 +47,28 @@ D           Light Gray     0;37      |      White           1;37
 
   __An -> lvalue refers to an object that persists beyond a single expression. 
   __An -> rvalue is a temporary value that does not persist beyond the expression that uses it.
+
+  Qt --> is the complete software development framework |\ 
+  The Qt framework contains a comprehensive set of highly intuitive
+        and modularized C++ library classes
+        and is loaded with APIs to simplify your application development.
+
+        Accuracy vs. precision :>
+        'Accuracy' refers to how close a measurement is to the true value, 
+        whereas
+        'Precesion' refers to how much informatoin you hae about a quantity.
+
+IEEE-754 represontition (ItripelE)
+float   s eeeeeeee mmmmmmmmmmmmmmmmmmmmmmm    meaning
+  31    0    8              23                bit #  simpel Precesion
+  64    0    11             53                       double Precesion
+
+        s = sign bit (+,0),, e = exponent, m = mantissa
+        in general: number = (sign ? -1:1) * base^(exponent real) * 1.(mantissa bits)
+
+        base 2 : value = signe * mantisse * 10^(± exposant real)
+        base 10 :  value = signe * mantisse * 2^(± exposant real)
+
+signal --> A slot is a function that is called in response to a particular signal.
+
+

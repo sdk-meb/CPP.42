@@ -1,4 +1,4 @@
-NAME = harlFilter # Opposite word of violence
+NAME = IEEE_754 # Opposite word of violence
 CC = c++
 
 INC= '-I$(shell pwd)'
@@ -13,7 +13,7 @@ SRC_FILES = $(shell ls *.cpp)
 
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp  $(shell ls *.hpp)
+%.opp:%.cpp  $(shell ls *.hp)
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}

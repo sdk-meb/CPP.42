@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/mes-sadk/Desktop/cpp.42/C++ Module 01/ex04'
+c++ -Wall -Wextra -Werror -std=c++98  '-I/Users/mes-sadk/Desktop/cpp.42/C++ Module 01/ex04' -o loser.opp -c loser.cpp
+c++ -Wall -Wextra -Werror -std=c++98  '-I/Users/mes-sadk/Desktop/cpp.42/C++ Module 01/ex04' -o main.opp -c main.cpp
+c++ -Wall -Wextra -Werror -std=c++98  '-I/Users/mes-sadk/Desktop/cpp.42/C++ Module 01/ex04' loser.opp main.opp -o loss 
+echo "\033[0;32m • Now you can run the exucitable file ./loss \033[0m"
+make: Leaving directory `/Users/mes-sadk/Desktop/cpp.42/C++ Module 01/ex04'
+ 
