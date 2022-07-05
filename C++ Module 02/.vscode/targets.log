@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Sun Jul  3 07:12:05 2022
+# Make data base, printed on Mon Jul  4 20:09:39 2022
 
 # Variables
 
@@ -15,8 +15,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -38,15 +36,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-ee0c8f54-82dd-4cbe-a826-89cf0ceedfb1.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc4h003314/T/vscode-ipc-06331c79-3f22-473c-957c-73f7f04c9c3c.sock
 # environment
-VSCODE_CWD = /Users/mes-sadk
+VSCODE_CWD = /
 # environment
 PATH = /Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/homebrew/bin:/Users/mes-sadk/goinfre/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-LaunchInstanceID = C2FE1012-63D5-44FB-B7C3-5D8347B00456
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -54,7 +50,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.m2X8aLgLDZ/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.JEBpDNv76U/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -70,8 +66,6 @@ HOME = /Users/mes-sadk
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CLI = 1
-# environment
 VSCODE_CODE_CACHE_PATH = /Users/mes-sadk/Library/Application Support/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
 LOGNAME = mes-sadk
@@ -85,32 +79,24 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
 # environment
-LC_TERMINAL = iTerm2
-# environment
-SHLVL = 3
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = mes-sadk
 # makefile
 .DEFAULT_GOAL := 
-# default
-MAKECMDGOALS := all
-# environment
-TERM_SESSION_ID = w0t0p0:624C196C-CCE8-4CD9-9F2B-B31E8E730E68
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# environment
-TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
@@ -126,23 +112,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 3.4.13
-# environment
-XPC_SERVICE_NAME = 0
-# environment
-LC_TERMINAL_VERSION = 3.4.13
+XPC_SERVICE_NAME = com.microsoft.VSCode.2152
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:624C196C-CCE8-4CD9-9F2B-B31E8E730E68
-# environment
-COLORFGBG = 7;0
-# environment
 __CF_USER_TEXT_ENCODING = 0x18C24:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # environment
@@ -150,13 +126,9 @@ HOMEBREW_NO_AUTO_UPDATE = 1
 # automatic
 <F = $(notdir $<)
 # environment
-ITERM_PROFILE = Default
-# environment
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186c3
 # automatic
 ^F = $(notdir $^)
 # default
@@ -168,11 +140,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 55389
+VSCODE_PID = 39594
 # variable set hash-table stats:
-# Load=80/1024=8%, Rehash=0, Collisions=4/101=4%
+# Load=65/1024=6%, Rehash=0, Collisions=1/86=1%
 
 # Pattern-specific Variable Values
 
@@ -211,6 +181,9 @@ Makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
+ 
+make: *** No rule to make target `all'.  Stop.
+
 #  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -254,8 +227,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sun Jul  3 07:12:05 2022
+# Finished Make data base on Mon Jul  4 20:09:39 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-
