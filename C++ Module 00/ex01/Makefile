@@ -8,7 +8,7 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98  # __Formatting__and__namin__conventions__
 
-INC= '-I$(shell PWD)'
+INC= '-I$(shell pwd)'
 
 SRC_FILES = $(shell ls *.cpp)
 

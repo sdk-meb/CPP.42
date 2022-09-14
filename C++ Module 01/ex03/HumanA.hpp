@@ -11,10 +11,7 @@ class HumanA{
 
 public:
 
-    HumanA(std::string name, Weapon& wpn){
-        this->name = name;
-        this->wpn = &wpn;
-    }
+    HumanA(std::string name, Weapon& wpn);
     void    attack();
 
 };

@@ -11,10 +11,7 @@ class HumanB{
 
 public:
 
-    HumanB(std::string name){
-        this->name = name;
-        wpn = NULL;
-    }
+    HumanB(std::string name);
     void attack();
     void    setWeapon(Weapon& wpn);
 

@@ -10,7 +10,7 @@ private:
     Contact contact[8];
 
 public:
-    PhoneBook(bool init=1); /* parameters CONSTURCTOR */
+    PhoneBook(); /* parameters CONSTURCTOR */
     ~PhoneBook(){return ;}; /*  DECONSTRUCTOR  */
     void add_contact(std::string name, std::string num, int c);
     void    reset_contact(int c);

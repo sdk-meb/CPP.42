@@ -10,10 +10,10 @@ private:
     std::string name;
 
 public:
-    Zombie( ){};
-    Zombie( std::string name):name(name){};
+    Zombie( std::string name="UNAMED"):name(name){};
     void    announce(void);
     void    Zombieset(std::string name){this->name = name;};
+    ~Zombie( );
 };
 
 Zombie* newZombie( std::string name);

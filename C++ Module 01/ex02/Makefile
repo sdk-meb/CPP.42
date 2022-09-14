@@ -8,7 +8,7 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
-SRC_FILE = $(shell ls *.cpp)
+SRC_FILE = main.cpp
 
 OBJ_FILE = $(SRC_FILE:.cpp=.opp)
 

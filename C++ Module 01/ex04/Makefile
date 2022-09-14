@@ -9,11 +9,10 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
-SRC_FILES = $(shell ls *.cpp)
-
+SRC_FILES = loser.cpp  main.cpp
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp  $(shell ls *.hpp)
+%.opp:%.cpp  losers.hpp 
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}

@@ -2,7 +2,7 @@ NAME = BraiiiiiiinnnzzzZ
 
 CC = c++
 
-INC= '-I$(shell PWD)'
+INC= '-I$(shell pwd)'
 
 RED = \033[0;31m
 GREEN = \033[0;32m
@@ -10,11 +10,11 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
-SRC_FILES = $(shell ls *.cpp)
+SRC_FILES = main.cpp  newZombie.cpp  randomChump.cpp  Zombie.cpp
 
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp  $(shell ls *.hpp)
+%.opp:%.cpp  Zombie.hpp
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}
