@@ -7,12 +7,12 @@
 class Zombie {
 
 private:
-    std::string name;
+    std::string Name;
 
 public:
-    Zombie( std::string name="UNAMED"):name(name){};
+    Zombie( std::string name="UNAMED"):Name(name){};
     void    announce(void);
-    void    Zombieset(std::string name){this->name = name;};
+    void    Zombieset(std::string name){this->Name = name;};
     ~Zombie( );
 };
 

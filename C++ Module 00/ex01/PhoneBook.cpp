@@ -1,112 +1,73 @@
-#include "PhoneBook.hpp"
-#include <string>
-#include <sstream>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 21:41:12 by sdk-meb           #+#    #+#             */
+/*   Updated: 2022/10/24 10:55:57 by sdk-meb          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+# include "PhoneBook.hpp"
 
 /************************** ADD CONTACT ***************************************/
-void PhoneBook::add_contact(std::string name, std::string num, int c)
-{
-	this->contact[c].add_name(name);
-	this->contact[c].add_num(num);
+void PhoneBook::add_contact(std::string name[PORT + 1], int con){
+
+	this->contact[con].set_fname	(name[FRST]);
+	this->contact[con].set_lname	(name[LST]);
+	this->contact[con].set_num		(name[NUM]);
+	this->contact[con].set_nickname	(name[DUP]);
+	this->contact[con].set_secret 	(name[PORT]);
 }
 
-/************************* REST CONTACT ***************************************/
-void PhoneBook::reset_contact(int c)
-{
-	this->contact[c].add_name("");
-	this->contact[c].add_num("");
-}
+void    PhoneBook::repo_guide_display(){
 
-/***************************** ADD NAME ***************************************/
-void Contact::add_name(std::string name)
-{
-	this->name = name;
-}
+	int c = 0;
+	std::string wall = "+----------",
+	column1 = "  INDEX" , column2 = "FRST NAME",
+	column3 = "LAST NAME",column4 = " NICKNAME" ;
 
-/**************************** ADD NUMBER **************************************/
-void Contact::add_num(std::string num)
-{
-	this->number = num;
+	do{
+		std::cout << wall + wall + wall + wall + '+' << std::endl 
+		<< "|" << std::left << std::setw(10) << (column1.length() <= 10 ? column1 : column1.replace(9, 1, ".").substr(0, 10))
+		<< "|" << std::setw(10) << (column2.length() <= 10 ? column2 : column2.replace(9, 1, ".").substr(0, 10))
+		<< "|" << std::setw(10) << (column3.length() <= 10 ? column3 : column3.substr(0, 10).replace(9, 1, "."))
+		<< "|" << std::setw(10) << (column4.length() <= 10 ? column4 : column4.substr(0, 10).replace(9, 1, "."))
+		<< "|" << std::endl;
+
+		std::stringstream stream;
+		stream << c + 1;
+		stream >> column1 ;
+		if (c >= 8)
+			break;
+		column2 = this->contact[c].get_info(FRST);
+		column3 = this->contact[c].get_info(LST);
+		column4 = this->contact[c++].get_info(DUP);
+
+	}while (column2.empty() == false);
+	std::cout << wall + wall + wall + wall + '+' << std::endl;
+
 }
 
 /************************** WRITE INFO OF CONTACT *****************************/
-void PhoneBook::print_contact(int c)
-{
+void PhoneBook::print_contact(int c){
 
-	std::cout << "{ " << c + 1 << " }\n name: "
-			  << this->contact[c].get_info(1) << std::endl;
-	std::cout << " number: "
-			  << this->contact[c].get_info(2) << std::endl;
-
-}
-
-/********************** GET PRIVATE INFO OF CONTACT ***************************/
-std::string Contact::get_info(int info)
-{
-	return (info == 1 ? this->name : this->number);
-}
-
-/************************* REPOSOTRY MANAGERE *********************************/
-void contact_repo(PhoneBook repo)
-{
-	std::string command;
-	std::string name;
-	std::string number;
-	int person = 0, contact = 0;
-
-S	:
-	std::cout << "\n\033[1;34m you can ADD or SEARCH a contact. \033[0m"
-			  << std::endl
-			  << "$>";
-	std::getline(std::cin, command);
-	if (std::cin.eof() == true)
-		return ;
-	if (command == "ADD")
-	{
-		if (person >= 8)
-			repo.reset_contact(person % 8);
-		std::cout << "new name :";
-		std::getline(std::cin, name);
-		if (std::cin.eof() == true)
-			return ;
-		std::cout << "number :";
-		std::getline(std::cin, number);
-		if (std::cin.eof() == true)
-			return ;
-		repo.add_contact(name, number, person++ % 8);
-	}
-	else if (command == "EXIT")
-		return ;
-	else if (command == "SEARCH")
-	{
-		std::cout << "what contact would like : ";
-		std::getline(std::cin, name);
-		if (std::cin.eof() == true)
-			return ;
-		std::stringstream stoi;
-		stoi << name;
-		stoi >> contact;
-		if (contact > 8 || contact <= 0 || person < contact)
-			std::cout << "contact " << contact << " not Found \n$>";
-		else
-			repo.print_contact((contact % 9) - 1);
-	}
-	else
-		std::cout << "\033[1;31m write {EXIT} if you haven't needed to me\n \033[0m";
-	goto S;
+	std::cout << "first name: "
+			  << this->contact[c].get_info(FRST) << std::endl;
+	std::cout << "last name: "
+			  << this->contact[c].get_info(LST) << std::endl;
+	std::cout << "phone number: "
+			  << this->contact[c].get_info(NUM) << std::endl;
+	std::cout << "nickname: "
+			  << this->contact[c].get_info(DUP) << std::endl;
+	std::cout << "description: "
+			  << this->contact[c].get_info(PORT) << std::endl;
 }
 
 /************************* BOOK CONSTRUCTOR ***********************************/
-PhoneBook::PhoneBook()
-{
+PhoneBook::PhoneBook(){
+
 	std::cout << "\033[1;44m Welcome to your contact repository \033[0m";
-}
-
-/*************************** main function ************************************/
-int main()
-{
-	PhoneBook repo;
-
-	contact_repo(repo);
-
-	return 0;
 }

@@ -2,19 +2,19 @@ NAME = Account
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98  # __Formatting__and__namin__conventions__
-
 RED = \033[0;31m
 GREEN = \033[0;32m
 NO_COLOR = \033[0m
 
-CODE_FILE = $(shell ls *.cpp)
-
-OBJ_FILES = $(CODE_FILE:.cpp=.opp)
+CFLAGS = -Wall -Wextra -Werror -std=c++98  # __Formatting__and__namin__conventions__
 
 INC= '-I$(shell pwd)'
 
-%.opp:%.cpp
+SRC_FILES = $(shell ls *.cpp)
+
+OBJ_FILES = $(SRC_FILES:.cpp=.opp)
+
+%.opp:%.cpp  $(shell ls *.hpp)
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}
