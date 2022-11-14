@@ -1,4 +1,4 @@
-NAME = OCCF # Opposite word of violence
+NAME = OCCF
 CC = c++
 
 INC= '-I$(shell pwd)'
@@ -9,11 +9,11 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
-SRC_FILES = $(shell ls *.cpp)
+SRC_FILES = Fixed.cpp main.cpp
 
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp  $(shell ls *.hpp)
+%.opp:%.cpp Fixed.h
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}

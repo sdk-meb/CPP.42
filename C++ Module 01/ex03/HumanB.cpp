@@ -2,18 +2,18 @@
 
 void    HumanB::setWeapon(Weapon& wpn){
 
-        this->wpn = &wpn;
+        this->Wpn = &wpn;
     }
 
 HumanB::HumanB(std::string name){
-        this->name = name;
-        wpn = NULL;
+        this->Name = name;
+        Wpn = NULL;
     }
 
 void    HumanB::attack(){
     
-        if (!this->wpn)
+        if (!this->Wpn)
             return ;
-        std::cout << name << " attacks with their "
-        << wpn->getType() << std::endl;
+        std::cout << Name << " attacks with their "
+        << Wpn->getType() << std::endl;
     }

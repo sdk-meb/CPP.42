@@ -1,5 +1,6 @@
-NAME = loss # Opposite word of violence
-CC = c++
+NAME	=	ClapTrap
+
+CC		= c++
 
 INC= '-I$(shell pwd)'
 
@@ -9,10 +10,11 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
-SRC_FILES = loser.cpp  main.cpp
+SRC_FILES = ClapTrap.cpp  main.cpp
+
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp  losers.hpp 
+%.opp:%.cpp		ClapTrap.hpp
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}

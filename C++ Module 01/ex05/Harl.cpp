@@ -56,17 +56,16 @@ void Harl::complain( std::string level ){
     void (Harl::* Ifptr) (void) = &Harl::info;
     void (Harl::* Wfptr) (void) = &Harl::warning;
     void (Harl::* Efptr) (void) = &Harl::error;
-    const comments msg = eDEBUG;
 
     switch (getlevel( level ))
     {
-        case msg:
-            return (*this.*Dfptr)();
-        case msg + 1:
-            return (*this.*Ifptr)();
-        case msg + 2:
-            return (*this.*Wfptr)();
-        case msg + 3:
+        case eDEBUG:
+            return (this->*Dfptr)();
+        case eINFO:
+            return (this->*Ifptr)();
+        case eWARNING:
+            return (this->*Wfptr)();
+        case eERROR:
             return (*this.*Efptr)();
         default:
             break;

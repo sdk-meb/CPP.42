@@ -10,7 +10,7 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
-SRC_FILES =  main.cpp  Zombie.cpp  ZombieHorde.cpp
+SRC_FILES =  main.cpp  Zombie.cpp  ZombieHorde.cpp 
 
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 

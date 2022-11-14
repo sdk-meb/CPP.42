@@ -36,7 +36,7 @@ int getlevel(std::string level)
     int i = 4;
 
     do{
-        switch ((level == lvls[i]) + i - i)
+        switch ((level == lvls[i]))
         {
             case true:
                 return (i);
@@ -56,22 +56,23 @@ void Harl::complain( std::string level ){
     void (Harl::* Ifptr) (void) = &Harl::info;
     void (Harl::* Wfptr) (void) = &Harl::warning;
     void (Harl::* Efptr) (void) = &Harl::error;
-    const comments msg = eDEBUG;
 
     switch (getlevel( level ))
     {
-        case msg:
-            (*this.*Dfptr)();
-        case msg + 1:
-            (*this.*Ifptr)();
-        case msg + 2:
-            (*this.*Wfptr)();
-        case msg + 3:
-            return (*this.*Efptr)();
+        case eDEBUG:{
+            (this->*Dfptr)();(this->*Ifptr)();(this->*Wfptr)();(this->*Efptr)();
+           break;}
+        case eINFO:{
+            (this->*Ifptr)();(this->*Wfptr)();(this->*Efptr)();
+           break;}
+        case eWARNING:{
+           (this->*Wfptr)();(this->*Efptr)();
+           break;}
+        case eERROR:
+            return (this->*Efptr)();
         default:
             std::cout << "[ robably complaining about insignificant problems ]"
-            << std::endl; 
-            break;
+            << std::endl;
     };
 
 }

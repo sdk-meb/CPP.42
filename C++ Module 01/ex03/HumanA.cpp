@@ -2,12 +2,12 @@
 
 HumanA::HumanA(std::string name, Weapon& wpn){
 
-        this->name = name;
-        this->wpn = &wpn;
+        this->Name = name;
+        this->Wpn = &wpn;
     }
 
 void    HumanA::attack(){
 
-        std::cout << name << " attacks with their "
-        << wpn->getType() << std::endl;
+        std::cout << Name << " attacks with their "
+        << Wpn->getType() << std::endl;
     }

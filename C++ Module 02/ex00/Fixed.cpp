@@ -1,32 +1,32 @@
 # include<Fixed.h>
 
-Fixed::Fixed():fixe_piont(0){
+Fixed::Fixed():Fixe_piont(0){
     std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed& fix){
     std::cout << "Copy constructor called" << std::endl;
 
-    this->fixe_piont = fix.fixe_piont;
+    *this  = fix;
 }
 
 Fixed& Fixed::operator=(const Fixed& fix){
     std::cout << "Copy assignment operator called" << std::endl;
 
-    this->fixe_piont = fix.fixe_piont;
+    Fixe_piont = fix.getRawBits();
     return *this;
 }
 
 int Fixed::getRawBits () const{
     std::cout << "getRawBits member function called" << std::endl;
 
-    return fixe_piont;
+    return Fixe_piont;
 }
 
 void    Fixed::setRawBits( int const raw ){
     std::cout << "setRawBits member function called" << std::endl;
 
-    this->fixe_piont =  raw;
+    Fixe_piont =  raw;
 }
 
 Fixed::~Fixed(){

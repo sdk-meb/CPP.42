@@ -10,8 +10,8 @@ Zombie* zombieHorde( int N, std::string name ){
     do
     {
         mobs[N].Zombieset(name);
-
         mobs[N].announce();
+
     } while(N--);
 
     return mobs;

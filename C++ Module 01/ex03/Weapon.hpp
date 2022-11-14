@@ -4,7 +4,7 @@
 #include<iostream>
 
 class Weapon{
-    std::string type;
+    std::string Type;
 
 public:
 

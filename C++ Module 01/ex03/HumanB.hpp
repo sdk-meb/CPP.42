@@ -6,8 +6,8 @@
 
 class HumanB{
 
-    Weapon* wpn;
-    std::string name;
+    Weapon* Wpn;
+    std::string Name;
 
 public:
 

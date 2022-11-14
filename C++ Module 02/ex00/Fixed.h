@@ -5,8 +5,8 @@
 
 class Fixed{
 
-    int fixe_piont;
-    static const int fraction_8 = 8;
+    int Fixe_piont;
+    static const int Fraction_8 = 8;
 
 public:
 

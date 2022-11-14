@@ -6,12 +6,13 @@
 
 class Fixed{
 
-    int fixe_point;
-    static const int fraction_8 = 8;
+    int Fixe_point;
+    static const int Fraction_8 = 8;
 
 public:
 
-    Fixed( int cint=0);
+    Fixed();
+    Fixed( int cint);
     Fixed( float flt);
     Fixed(const Fixed& fix);// copy constructor
     Fixed& operator= (const Fixed& fix);// copy assigenment operator overload
