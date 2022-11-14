@@ -4,7 +4,7 @@ ClapTrap::ClapTrap(std::string name):Name(name){
 
 	Hit = 10;	Energy = 10;	Attack = 0;
 
-	std::cout << "I'm" << Name << ", i'm ready to attack" << std::endl;
+	std::cout << "I'm " << Name << ", i'm ready to attack" << std::endl;
 };
 
 void ClapTrap::attack(const std::string& target){
@@ -17,6 +17,7 @@ void ClapTrap::attack(const std::string& target){
 };
 
 void ClapTrap::takeDamage(unsigned int amount){
+	amount = 0;
 
 };
 

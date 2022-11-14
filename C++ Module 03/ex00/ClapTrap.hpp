@@ -18,3 +18,5 @@ public:
     void beRepaired(unsigned int amount);
     ~ClapTrap();
 };
+
+# endif
