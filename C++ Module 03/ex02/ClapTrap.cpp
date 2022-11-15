@@ -6,15 +6,15 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:15:16 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/15 11:52:57 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:14:35 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name):Name(name){
+ClapTrap::ClapTrap(std::string name, uint hit, uint energy, uint attdmg):Name(name){
 
-	Hit = 10;	Energy = 10;	AttackDamage = 0;
+	Hit = hit;	Energy = energy;	AttackDamage = attdmg;
 
 	std::cout << "I'm " << Name << ", i'm ready to attack" << std::endl;
 };

@@ -6,15 +6,14 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:19:35 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/15 11:52:26 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:20:09 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"ScavTrap.hpp"
 
-ScavTrap::ScavTrap( std::string name):ClapTrap(name + "(ScavTrap)") {
-
-    Hit *= 10; Energy *= 50; AttackDamage += 20;
+ScavTrap::ScavTrap( std::string name):ClapTrap(name, 100, 500, 20) {
+	std::cout << "ScavTrap HERE!\n";
 }
 
 void ScavTrap::attack(const std::string& target){

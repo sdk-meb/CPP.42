@@ -1,30 +1,91 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/15 08:46:57 by mes-sadk          #+#    #+#             */
+/*   Updated: 2022/11/15 10:15:35 by mes-sadk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include"ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name):Name(name){
 
-	Hit = 10;	Energy = 10;	Attack = 0;
+	Hit = 10;	Energy = 10;	AttackDamage = 0;
 
 	std::cout << "I'm " << Name << ", i'm ready to attack" << std::endl;
 };
 
-void ClapTrap::attack(const std::string& target){
-	if (Energy <= 0 || Hit <= 0)
-		return ;
-	Hit-=1;	Energy -= 1;
+ClapTrap::ClapTrap(const ClapTrap& claptrap2){
 
-	std::cout << Name << " attacks " << target
-	<< ", causing Hit & Energy points of damage!" << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
+	*this = claptrap2;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& claptrap2){
+    std::cout << "Copy assignment operator called" << std::endl;
+
+	Hit = claptrap2.getHit();
+	Energy = claptrap2.getEnergy();
+	this->AttackDamage = claptrap2.getattack();
+	
+	return *this;
+}
+
+std::string ClapTrap::getName() const{
+	std::cout << "GET_NAME" << std::endl;
+	return Name;
+};
+unsigned int ClapTrap::getHit() const{
+	std::cout << "GET_HitPoint" << std::endl;
+	return Hit;
+};
+unsigned int ClapTrap::getattack() const{
+	std::cout << "GET_AttackDamage" << std::endl;
+	return AttackDamage;
+};
+unsigned int ClapTrap::getEnergy() const{
+	std::cout << "GET_EnergyPoint" << std::endl;
+	return Energy;
+};
+
+void ClapTrap::attack(const std::string& target){
+
+	if (Energy <= 0){
+		std::cout	<< Name
+					<< " is out of energy!" << std::endl;
+		return ;
+	}
+	Energy -= 1;
+
+	std::cout	<< Name << " attacks " << target
+				<< ", causing Energy points of damage!" << std::endl;
 };
 
 void ClapTrap::takeDamage(unsigned int amount){
-	amount = 0;
 
+	if (amount > Hit)
+		amount = Hit;
+	Hit -= amount;
+
+	std::cout	<< Name << " takes " << amount
+				<< " points of damage!" << std::endl;
 };
 
 void ClapTrap::beRepaired(unsigned int amount){
-	if (Energy <= 0)
+
+	if (Energy <= 0){
+		std::cout	<< Name
+					<< " is out of energy!" << std::endl;
 		return ;
+	}
+
 	Hit += amount;	Energy -= 1;
+	std::cout	<< Name << " was repaired by " << amount << " point!"
+				<< " have now " << Hit << " point of Hit." << std::endl;
 };
 
 ClapTrap::~ClapTrap(){

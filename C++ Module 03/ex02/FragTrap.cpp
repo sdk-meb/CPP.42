@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 10:19:37 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/15 11:48:07 by mes-sadk         ###   ########.fr       */
+/*   Created: 2022/11/15 11:58:17 by mes-sadk          #+#    #+#             */
+/*   Updated: 2022/11/15 12:25:35 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ScaveTrap_H
-# define ScaveTrap_H
+# include"FragTrap.hpp"
 
-# include"ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap{
+FragTrap::FragTrap(std::string name):ClapTrap(name, 100, 100, 30){
 
-public:
+    std::cout << "FragTrap HERE" << std::endl;
+}
 
-    ScavTrap( std::string name="unamed");
-    void attack(const std::string& target);
-    void guardGate();
-    ~ScavTrap();
+void FragTrap::highFivesGuys(){
+
+    std::cout << "High five guys" << std::endl;
 };
 
-# endif
+FragTrap::~FragTrap(){
+
+    std::cout << "say to FcavTrap:";
+}

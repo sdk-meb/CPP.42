@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:18:16 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/15 10:26:11 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:14:18 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ protected:
 
 
 public:
-    ClapTrap( std::string name="unamed" );
+    ClapTrap( std::string name="unamed", uint hit=10, uint energy=10, uint attdmg=0 );
     ClapTrap( const ClapTrap& claptrap2 );
 
     ClapTrap& operator=( const ClapTrap& claptrap );
