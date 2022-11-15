@@ -1,4 +1,4 @@
-NAME	=	FragTrap
+NAME	=	DiamondTrap
 
 CC		= c++
 
@@ -10,11 +10,11 @@ NO_COLOR = \033[0m
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 # __Formatting__and__namin__conventions__
 
-SRC_FILES = ClapTrap.cpp ScavTrap.cpp  main.cpp FragTrap.cpp
+SRC_FILES = ClapTrap.cpp ScavTrap.cpp  main.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+%.opp:%.cpp	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}
