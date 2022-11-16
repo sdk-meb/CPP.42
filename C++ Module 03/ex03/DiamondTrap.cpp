@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,20 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
-
-# include"FragTrap.hpp"
-# include"ScavTrap.hpp"
-
-class DiamondTrap{
-
-    std::string Name;
-
-public:
-    DiamondTrap(/* args */);
-    ~DiamondTrap();
-};
+# include"DiamondTrap.hpp"
 
 
-#endif
+DiamondTrap::DiamondTrap( std::string name){
+   
+    setHit(0);
+    setEnergy(0);
+	setAttackDamage(0);
+    setName(name);
+    std::cout << "DiamondTrap HERE" << std::endl;
+}
+
+void DiamondTrap::whoAmI(){
+
+    std::cout   << "My name is: " << Name
+                << ", and my ClapTrap name is: " << getName()
+                << std::endl;
+}
+DiamondTrap::~DiamondTrap(){
+    std::cout << "DiamondTrap say, ";
+}
+

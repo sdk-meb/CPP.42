@@ -6,15 +6,18 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:58:17 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/15 12:25:35 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/16 12:10:01 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"FragTrap.hpp"
 
 
-FragTrap::FragTrap(std::string name):ClapTrap(name, 100, 100, 30){
+FragTrap::FragTrap(std::string name):ClapTrap(name){
 
+    setHit(100);
+    setEnergy(100);
+	setAttackDamage(30);
     std::cout << "FragTrap HERE" << std::endl;
 }
 
@@ -25,5 +28,5 @@ void FragTrap::highFivesGuys(){
 
 FragTrap::~FragTrap(){
 
-    std::cout << "say to FcavTrap:";
+    std::cout << " FcagTrap say, ";
 }

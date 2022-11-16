@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.cpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,13 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include"DiamondTrap.hpp"
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
+
+# include"FragTrap.hpp"
+# include"ScavTrap.hpp"
+
+class DiamondTrap: virtual  public FragTrap, public virtual ScavTrap{
+
+    std::string Name;
+
+public:
+    DiamondTrap(std::string="D_UNAMED");
+    void whoAmI();
+    ~DiamondTrap();
+};
 
 
-DiamondTrap::DiamondTrap(/* args */){
-    
-}
-
-DiamondTrap::~DiamondTrap(){
-
-}
+#endif
