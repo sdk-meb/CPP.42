@@ -16,7 +16,7 @@
 # include"FragTrap.hpp"
 # include"ScavTrap.hpp"
 
-class DiamondTrap: virtual  public FragTrap, public virtual ScavTrap{
+class DiamondTrap: virtual  public FragTrap, public0 virtual ScavTrap{
 
     std::string Name;
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/17 10:52:30 by mes-sadk          #+#    #+#             */
+/*   Updated: 2022/11/17 10:52:31 by mes-sadk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef _IEEE_H_ //  IEEE Standard for Floating-Point Arithmetic (IEEE 754)
 # define _IEEE_H_ //  Institute of Electrical and Electronics Engineers
 

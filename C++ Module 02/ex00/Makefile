@@ -1,4 +1,4 @@
-NAME = OCCF
+NAME = Fix
 CC = c++
 
 INC= '-I$(shell pwd)'
