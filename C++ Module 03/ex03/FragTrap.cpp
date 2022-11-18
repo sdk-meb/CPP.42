@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:58:17 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/16 12:10:01 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/18 17:35:05 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"FragTrap.hpp"
 
 
-FragTrap::FragTrap(std::string name):ClapTrap(name){
+FragTrap::FragTrap(std::string name){
 
+    setName(name);
     setHit(100);
     setEnergy(100);
 	setAttackDamage(30);

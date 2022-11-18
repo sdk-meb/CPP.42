@@ -17,8 +17,9 @@ DiamondTrap::DiamondTrap( std::string name){
    
     setHit(0);
     setEnergy(0);
-	setAttackDamage(0);
     setName(name);
+    Name = name;
+	setAttackDamage(0);
     std::cout << "DiamondTrap HERE" << std::endl;
 }
 

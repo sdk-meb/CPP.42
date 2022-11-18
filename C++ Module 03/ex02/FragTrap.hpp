@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:58:20 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/15 12:21:40 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/16 12:16:17 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 
 # include"ClapTrap.hpp"
 
-class FragTrap: public ClapTrap{
-    
-    
+class FragTrap: virtual public ClapTrap{
+
 public:
-    FragTrap(std::string="unamed");
+    FragTrap(std::string="F_unamed");
 
     void highFivesGuys(void);
-    ~FragTrap();
+     ~FragTrap();
 };
 
 # endif

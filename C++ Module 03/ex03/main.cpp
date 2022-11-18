@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:32:13 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/16 12:19:41 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/18 17:37:53 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int main(){
 
-    DiamondTrap DIAM;
+    DiamondTrap DIAM("mybrean");
     DIAM.attack("45");
+    DIAM.getName();
 
     return 0;
 }
