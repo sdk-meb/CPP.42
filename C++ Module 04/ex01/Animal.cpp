@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 09:58:20 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 12:45:36 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/19 19:43:01 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,11 @@ std::string Animal::getType() const{
 
 void Animal::makeSound() const{
 
-    if (Type == "Dog")
-        std::cout << "🐈🐈🐈 mio...."<< std::endl;
-    else if (Type == "Cat")
-        std::cout << "🐶🐶🐶 hwhw..." << std::endl;
+        std::cout << "no specific animal so no sound" << std::endl;
 };
     
 Animal::~Animal(void){
 
     std::cout << "destroy " << Type << " animal!" << std::endl;
 }
+

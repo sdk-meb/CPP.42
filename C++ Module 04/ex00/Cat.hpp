@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:24 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 17:16:24 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/19 19:23:40 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,16 @@ class Cat: public Animal{
 
     public:
         Cat();
-
+        virtual void makeSound() const;
         ~Cat(void);
+};
+
+class WrongCat: public WrongAnimal{
+
+    public:
+        WrongCat();
+        void makeSound() const;
+        ~WrongCat(void);
 };
 
 #endif

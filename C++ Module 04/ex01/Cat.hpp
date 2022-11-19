@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:24 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 17:31:57 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/19 20:29:15 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 # define CAT_HPP
 
 # include"Animal.hpp"
-# include"Brain.hpp"
 
 class Cat: public Animal{
 
-    Brain*  brain;
+        Brain* brain;
     public:
         Cat();
-
-        ~Cat(void);
+        Cat(const Cat& cat);
+        const Cat& operator=(const Cat& cat);
+        void    setBrain( Brain* const brain);
+        Brain*  getBrain() const;
+        virtual void makeSound() const;
+        virtual ~Cat(void);
 };
 
 #endif

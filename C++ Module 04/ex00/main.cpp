@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:22:40 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 17:18:29 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/19 19:39:36 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,30 @@ int main(){
     const Animal* j = new Dog();
     const Animal* i = new Cat;
 
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
     
+    const WrongAnimal* Wmeta = new WrongAnimal();
+    const WrongAnimal* Wi = new WrongCat;
 
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-    
+
+    std::cout << Wi->getType() + ": ";
+        Wi->makeSound();
+
+    std::cout << Wmeta->getType() + ": ";
+        Wmeta->makeSound();
+
+    delete Wi;
+    delete Wmeta;
+
+
+     std::cout << j->getType() + ": ";
+        j->makeSound();
+
+    std::cout << i->getType() + ": ";
+        i->makeSound();
+        
+    std::cout << meta->getType() + ": ";
+        meta->makeSound();
+        
     delete j;
     delete i;
     delete meta;

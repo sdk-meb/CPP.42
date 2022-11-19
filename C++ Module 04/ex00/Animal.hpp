@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 09:58:39 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 12:47:02 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/19 19:26:35 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,23 @@ class Animal{
         const Animal& operator=(const Animal& animal);
         void setType( std::string type );
         std::string getType() const;
-        void makeSound() const;
+        virtual void makeSound() const;
         virtual ~Animal(void);
+};
+
+class WrongAnimal{
+    
+    protected:
+        std::string Type;
+
+    public:
+        WrongAnimal(std::string type="Unknown");
+        WrongAnimal(const WrongAnimal& animal);
+        const WrongAnimal& operator=(const WrongAnimal& animal);
+        void setType( std::string type );
+        std::string getType() const;
+        void makeSound() const;
+        ~WrongAnimal(void);
 };
 
 

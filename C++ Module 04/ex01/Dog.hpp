@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:29 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 17:32:44 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/19 20:30:38 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,21 @@
 # define DOG_HPP
 
 # include"Animal.hpp"
-# include"Brain.hpp"
 
 class Dog: public Animal{
 
-        Brain*  brain;
+        Brain* brain;
     public:
         Dog();
-        ~Dog(void);
+        Dog(const Dog& dog);
+        const Dog& operator=(const Dog& dog);
+    
+        void    setBrain( Brain* const brain);
+        Brain*  getBrain() const;
+    
+        virtual void makeSound() const;
+    
+        virtual ~Dog(void);
 };
 
 #endif

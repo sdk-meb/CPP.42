@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:29 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 11:32:40 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/19 19:20:17 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Dog: public Animal{
 
     public:
         Dog();
+        virtual void makeSound() const;
         ~Dog(void);
 };
 

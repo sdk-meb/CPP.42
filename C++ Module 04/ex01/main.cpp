@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:22:40 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 18:02:15 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/19 19:41:26 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int main(){
     delete stockyard[2];
       delete stockyard[3];
     delete stockyard[4];
-    
+
     return 0;
 }
