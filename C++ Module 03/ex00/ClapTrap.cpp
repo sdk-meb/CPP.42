@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:15:16 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/18 17:28:02 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/18 19:26:26 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(const ClapTrap& claptrap2){
 ClapTrap& ClapTrap::operator=(const ClapTrap& claptrap2){
     std::cout << "Copy assignment operator called" << std::endl;
 
-	Name	= getName();
+	Name	= claptrap2.getName();
 	Energy		= claptrap2.getEnergy();
 	this->Hit		= claptrap2.getHit();
 	AttackDamage		= claptrap2.getattack();
@@ -71,9 +71,9 @@ void ClapTrap::setAttackDamage(uint    attackdamage){
 
 void ClapTrap::attack(const std::string& target){
 
-	if (Energy <= 0){
+	if (Energy <= 0 || Hit <= 0){
 		std::cout	<< Name
-					<< " is out of energy!" << std::endl;
+					<< " There is no way to live!." << std::endl;
 		return ;
 	}
 	Energy -= 1;
@@ -84,6 +84,12 @@ void ClapTrap::attack(const std::string& target){
 
 void ClapTrap::takeDamage(unsigned int amount){
 
+	if (Hit <= 0){
+
+		std::cout	<< Name
+					<< " Acknowledge his surrender." << std::endl;
+		return ;
+	}
 	if (amount > Hit)
 		amount = Hit;
 	Hit -= amount;
@@ -94,7 +100,7 @@ void ClapTrap::takeDamage(unsigned int amount){
 
 void ClapTrap::beRepaired(unsigned int amount){
 
-	if (Energy <= 0){
+	if (Energy <= 0 || Hit <= 0){
 		std::cout	<< Name
 					<< " is out of energy!" << std::endl;
 		return ;
