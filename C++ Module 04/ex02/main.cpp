@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:22:40 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 09:45:17 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 12:08:22 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(){
     Dog a2;
     Animal *og = &a2 ;
     Dog a3;
-
+    
     a3 = a2;
     og->makeSound();
     return 0;

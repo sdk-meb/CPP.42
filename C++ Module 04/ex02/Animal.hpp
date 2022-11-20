@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 09:58:39 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 09:44:47 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 10:00:09 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Animal{
         virtual const Animal& operator=(const Animal& animal);
         void setType( std::string type );
         std::string getType() const;
-        virtual void makeSound() const;
+        virtual void makeSound() const = 0;
         virtual ~Animal(void);
 };
 
