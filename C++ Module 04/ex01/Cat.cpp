@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:22 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 20:37:28 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/19 23:33:32 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 Cat::Cat():Animal("Cat"){
 
+    std::cout << "Cat are here!" << std::endl;
     brain = new Brain;
-    std::cout << "Cat are here!" << std::endl; 
 }
 
-Cat::Cat(const Cat& cat){
+Cat::Cat(const Cat& cat):Animal("Cat"){
     std::cout << "Copy constructor called(🐈)" << std::endl;
 	
+    brain = new Brain(*(cat.brain));
+
     Type = cat.getType();
 }
 const Cat& Cat::operator=(const Cat& cat){
@@ -29,14 +31,15 @@ const Cat& Cat::operator=(const Cat& cat){
     std::cout << "Copy assignment operator called(🐈)" << std::endl;
 
     delete brain;
-    brain = cat.getBrain();
+    brain = new Brain(*(cat.brain));
+
     Type = cat.getType();
     return *this;
 }
 
 void    Cat::setBrain(Brain* const _brain){
     
-    this->brain =  _brain;
+    this->brain = _brain;
 }
 Brain*  Cat::getBrain() const{
 

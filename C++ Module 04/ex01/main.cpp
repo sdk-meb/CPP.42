@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:22:40 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 19:41:26 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/19 23:40:41 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,26 @@
 
 int main(){
 
-    const Animal* stockyard[5] = { new Dog(),  new Dog(),  new Dog(),  new Cat(),  new Cat() };
+//     const Animal* stockyard[5] = { new Dog(),  new Dog(),  new Dog(),  new Cat(),  new Cat() };
 
     
-    stockyard[0]->makeSound();
-     stockyard[1]->makeSound();
-      stockyard[2]->makeSound();
-       stockyard[3]->makeSound();
-        stockyard[4]->makeSound();
+//     stockyard[0]->makeSound();
+//      stockyard[1]->makeSound();
+//       stockyard[2]->makeSound();
+//        stockyard[3]->makeSound();
+//         stockyard[4]->makeSound();
     
-    delete stockyard[0];
-        delete stockyard[1];
-    delete stockyard[2];
-      delete stockyard[3];
-    delete stockyard[4];
+//    stockyard[0] = stockyard[1];
+//     delete stockyard[0];
+//         delete stockyard[1];
+//     delete stockyard[2];
+//       delete stockyard[3];
+//     delete stockyard[4];
 
+Dog a1;
+Dog a2 = a1;
+Dog a3(a2);
+
+a3 = a1;
     return 0;
 }

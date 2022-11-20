@@ -3,24 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:27 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 20:36:48 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/19 23:44:31 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Dog.hpp"
 
-
 Dog::Dog():Animal("Dog"){
 
+    std::cout  <<" Dog are here!" << std::endl;
     brain = new Brain;
-    std::cout  <<" Dog are here!" << std::endl; 
 }
-Dog::Dog(const Dog& dog){
+Dog::Dog(const Dog& dog):Animal("Dog"){
     std::cout << "Copy constructor called(🐶)" << std::endl;
 	
+    brain = new Brain(*dog.brain);
+
     Type = dog.getType();
 }
 const Dog& Dog::operator=(const Dog& dog){
@@ -28,7 +29,8 @@ const Dog& Dog::operator=(const Dog& dog){
     std::cout << "Copy assignment operator called(🐶)" << std::endl;
 
     delete brain;
-    brain = dog.getBrain();
+
+    brain = new Brain(*dog.brain);
     Type = dog.getType();
     return *this;
 }
@@ -49,5 +51,5 @@ void Dog::makeSound() const{
 Dog::~Dog(void){
 
     delete brain;
-  std::cout << "The Dog killed!" << std::endl;
+    std::cout << "The Dog killed!" << std::endl;
 }
