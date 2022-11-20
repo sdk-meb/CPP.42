@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:43:20 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 21:59:47 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 23:26:37 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ AMateria* Cure::clone() const{
 }
 void Cure::use(ICharacter& target){
 
-    std::cout << "* heals " << target.getName() << "’s wounds *";
+    std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
 }
 
 Cure::~Cure(){

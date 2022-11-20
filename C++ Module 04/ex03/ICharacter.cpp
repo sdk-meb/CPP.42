@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 11:09:58 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 22:13:11 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 23:41:06 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,55 +27,37 @@ ICharacter::ICharacter(const ICharacter& IChar){
 
     std::cout << "copy constructor call( ICharacter )" << std::endl;
     Name = IChar.getName();
-    if (IChar.Inventry[0])
-        Inventry [0] = IChar.Inventry[0]->clone();
-    else
-        Inventry [0] = NULL;
-    if (IChar.Inventry[1])
-        Inventry [1] = IChar.Inventry[1]->clone();
-    else
-        Inventry [1] = NULL;
-    if (IChar.Inventry[0])
-        Inventry [2] = IChar.Inventry[2]->clone();
-    else
-        Inventry [2] = NULL;
-    if (IChar.Inventry[0])
-        Inventry [3] = IChar.Inventry[3]->clone();
-    else
-        Inventry [3] = NULL;
+    for (int idx=0; idx < 4; idx++){
+
+        if (IChar.Inventry[idx])
+            Inventry [idx] = IChar.Inventry[idx]->clone();
+        else
+            Inventry [idx] = NULL;
+    }
 }
 ICharacter&   ICharacter::operator=(const ICharacter& IChar){
 
     std::cout << "copy assignment operator call( ICharacter )" << std::endl;
     Name = IChar.Name;
-    if (Inventry [0])
-        delete Inventry [0];
-    if (Inventry [1])
-        delete Inventry [1];
-    if (Inventry [2])
-        delete Inventry [2];
-    if (Inventry [3])
-        delete Inventry [3];
-    if (IChar.Inventry[0])
-        Inventry [0] = IChar.Inventry[0]->clone();
-    else
-        Inventry [0] = NULL;
-        if (IChar.Inventry[1])
-        Inventry [1] = IChar.Inventry[1]->clone();
-    else
-        Inventry [1] = NULL;
-    if (IChar.Inventry[0])
-        Inventry [2] = IChar.Inventry[2]->clone();
-    else
-        Inventry [2] = NULL;
-    if (IChar.Inventry[0])
-        Inventry [3] = IChar.Inventry[3]->clone();
-    else
-        Inventry [3] = NULL;
+    for (int idx=0; idx < 4; idx++){
+
+        if (Inventry [idx])
+            delete Inventry [idx];
+
+        if (IChar.Inventry[idx])
+            Inventry [idx] = IChar.Inventry[idx]->clone();
+        else
+            Inventry [idx] = NULL;
+    }
     return *this;
 }
 
 ICharacter::~ICharacter(){
 
+    for (int idx=0; idx < 4; idx++){
+
+        if (Inventry [idx])
+            delete Inventry[idx];
+    }
     std::cout << "destroy " << Name << " ( ICHARACTER )" << std::endl;
 }

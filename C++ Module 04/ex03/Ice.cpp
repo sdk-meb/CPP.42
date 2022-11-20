@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:43:26 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 21:59:36 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 23:27:04 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ AMateria* Ice::clone() const{
 void Ice::use(ICharacter& target){
 
     std::cout   << "* shoots an ice bolt at <"
-                << target.getName() << " *";
+                << target.getName() << " *" << std::endl;
 }
 
 Ice::~Ice(){
