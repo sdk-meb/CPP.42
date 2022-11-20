@@ -3,52 +3,50 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 11:34:38 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 17:50:14 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/20 22:27:47 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Character.hpp"
 
 
-Character::Character(std::string name){
+Character::Character(std::string name):ICharacter(name){}
+Character::Character(const Character& character):ICharacter(character){
 
-    Name = name;
-    Inventry [0] = NULL;
-     Inventry [1] = NULL;
-      Inventry [2] = NULL;
-       Inventry [3] = NULL;
-}
-
-Character::Character(const Character& character){
-    
-    Name = character.Name;
-    Inventry [0] = character.Inventry [0];
-     Inventry [1] = character.Inventry [1];
-      Inventry [2] = character.Inventry [2];
-       Inventry [3] = character.Inventry [3];
-    
+    std::cout << "copy constructor call( Character )" << std::endl;
 }
 Character& Character::operator=(const Character& character){
     
+    std::cout << "copy assignment operator call( Character )" << std::endl;
     Name = character.Name;
-    if (Inventry [0]){
-        
+    if (Inventry [0])
         delete Inventry [0];
-    }
     if (Inventry [1])
         delete Inventry [1];
     if (Inventry [2])
         delete Inventry [2];
     if (Inventry [3])
         delete Inventry [3];
-    Inventry [0] = character.Inventry[0]->clone();
-     Inventry [1] = character.Inventry [1]->clone();
-      Inventry [2] = character.Inventry [2]->clone();
-       Inventry [3] = character.Inventry [3]->clone();
-    
+    if (character.Inventry[0])
+        Inventry [0] = character.Inventry[0]->clone();
+    else
+        Inventry [0] = NULL;
+        if (character.Inventry[1])
+        Inventry [1] = character.Inventry[1]->clone();
+    else
+        Inventry [1] = NULL;
+    if (character.Inventry[0])
+        Inventry [2] = character.Inventry[2]->clone();
+    else
+        Inventry [2] = NULL;
+    if (character.Inventry[0])
+        Inventry [3] = character.Inventry[3]->clone();
+    else
+        Inventry [3] = NULL;
+
     return *this;
 }
 
@@ -72,11 +70,12 @@ void Character::unequip(int idx){
     if (idx >= 0 && idx < 4)
         Inventry[idx] = NULL;
 }
-void Character::use(int idx, Character& target){
+void Character::use(int idx, ICharacter& target){
 
-    if (idx >= 0 && idx < 4)
+    if (idx >= 0 && idx < 4 && Inventry[idx] != NULL)
         Inventry[idx]->use(target);
 }
+
 Character::~Character(){
             
 }

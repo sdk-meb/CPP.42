@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 10:43:23 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 21:56:43 by mes-sadk         ###   ########.fr       */
+/*   Created: 2022/11/20 19:55:55 by mes-sadk          #+#    #+#             */
+/*   Updated: 2022/11/20 22:22:24 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
 # include"AMateria.hpp"
 
 
-class Cure: public AMateria{
 
+class IMateriaSource{
+    
+    protected:
+        AMateria* Materias[4];
 
     public:
-        Cure(/* args */);
-        Cure(const Cure& cure);
-        Cure& operator=(const Cure& cure);
-        AMateria* clone() const;
-        void use(ICharacter& target);
-        ~Cure();
+        IMateriaSource(/* args */);
+        IMateriaSource(const IMateriaSource& IChar);
+        IMateriaSource&   operator=(const IMateriaSource& IChar);
+        virtual void learnMateria(AMateria*) = 0;
+        virtual AMateria* createMateria(std::string const & type) = 0;
+        virtual ~IMateriaSource() ;
 };
 
 
 
-
-
-#endif
+# endif

@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:43:29 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 12:54:56 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 22:00:40 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include"AMateria.hpp"
 
+
 class Ice: public AMateria{
 
 
@@ -22,8 +23,8 @@ class Ice: public AMateria{
         Ice(/* args */);
         Ice(const Ice& ice);
         Ice& operator=(const Ice& ice);
-        virtual AMateria* clone() const;
-        virtual void use(ICharacter& target);
+        AMateria* clone() const;
+        void use(ICharacter& target);
         ~Ice();
 };
 

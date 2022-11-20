@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 11:10:01 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 18:52:47 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/20 22:18:20 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,15 @@
 
 class ICharacter
 {
-    public:
+    
     protected:
         std::string Name;
         AMateria* Inventry[4];
+
     public:
-        ICharacter();
+        ICharacter(std::string name="");
+        ICharacter(const ICharacter& IChar);
+        ICharacter&   operator=(const ICharacter& IChar);
         virtual std::string const & getName() const = 0;
         virtual void equip(AMateria* m) = 0;
         virtual void unequip(int idx) = 0;

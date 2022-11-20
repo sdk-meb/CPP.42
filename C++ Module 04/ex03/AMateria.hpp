@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:39:54 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 18:53:14 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/20 21:46:33 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@
 
 class     ICharacter;
 
-
 class AMateria{
 
-    public:
     protected:
         std::string Type;
+
     public:
-        AMateria();
+        AMateria(std::string const & type="");
         AMateria(const AMateria& materia);
-        AMateria(std::string const & type);
         AMateria& operator=(const AMateria& materia);
-        std::string const & getType() const; //Returns the materia type
+    
+        std::string const & getType() const; 
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);
+       
         virtual ~AMateria();
 };
 
