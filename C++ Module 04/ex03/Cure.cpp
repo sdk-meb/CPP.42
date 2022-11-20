@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:43:20 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 12:48:19 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 17:43:11 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Cure.hpp"
 
 
-Cure::Cure(/* args */):AMateria("cure") {
+Cure::Cure():AMateria("cure") {
     
 }
 

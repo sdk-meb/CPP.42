@@ -3,24 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:39:54 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 12:58:22 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 18:53:14 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
+
 # include"iostream"
+
+class     ICharacter;
+
 
 class AMateria{
 
+    public:
     protected:
         std::string Type;
     public:
-    # include "ICharacter.hpp"
         AMateria();
         AMateria(const AMateria& materia);
         AMateria(std::string const & type);
@@ -28,9 +33,9 @@ class AMateria{
         std::string const & getType() const; //Returns the materia type
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);
-        ~AMateria();
+        virtual ~AMateria();
 };
 
-    # include "ICharacter.hpp"
+# include "ICharacter.hpp"
 
 # endif

@@ -3,22 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 11:10:01 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 11:57:05 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 18:52:47 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-
 # include"AMateria.hpp"
+
+# include"iostream"
 
 class ICharacter
 {
-   protected:
+    public:
+    protected:
         std::string Name;
         AMateria* Inventry[4];
     public:
@@ -29,5 +31,8 @@ class ICharacter
         virtual void use(int idx, ICharacter& target) = 0;
         virtual ~ICharacter();
 };
+
+
+# include"AMateria.hpp"
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 11:34:38 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 12:45:29 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 17:50:14 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void Character::unequip(int idx){
 }
 void Character::use(int idx, Character& target){
 
+    if (idx >= 0 && idx < 4)
+        Inventry[idx]->use(target);
 }
 Character::~Character(){
             

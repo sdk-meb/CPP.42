@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:43:23 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 12:55:02 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/20 18:50:35 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cure: public AMateria{
         Cure(/* args */);
         Cure(const Cure& cure);
         Cure& operator=(const Cure& cure);
-        AMateria* Cure::clone() const;
+        AMateria* clone() const;
         void use(ICharacter& target);
         ~Cure();
 };
