@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:22 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/19 19:24:59 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/21 02:15:15 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ Cat::~Cat(void){
 
   std::cout << "The Cat killed!" << std::endl;
 }
+
+
 
 /* *******************   WRONG_CAT   ******************* */
 WrongCat::WrongCat():WrongAnimal("WrongCat"){

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 09:58:20 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 10:37:03 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/21 02:28:55 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,7 @@ Animal::Animal(const Animal& animal){
 	
     Type = animal.getType();
 }
-const Animal& Animal::operator=(const Animal& animal){
 
-    std::cout << "Copy assignment operator called" << std::endl;
-
-    Type = animal.getType();
-    return *this;
-}
 
 void    Animal::setType(std::string type){
     

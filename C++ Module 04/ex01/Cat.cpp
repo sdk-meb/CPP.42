@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:22 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 09:20:43 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/21 02:22:41 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ const Cat& Cat::operator=(const Cat& cat){
 
     std::cout << "Copy assignment operator called(🐈)" << std::endl;
 
-    delete brain;
+    if (brain)
+        delete brain;
     brain = new Brain(*(cat.brain));
 
     Type = cat.getType();

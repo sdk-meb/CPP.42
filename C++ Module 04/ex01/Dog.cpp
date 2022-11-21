@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:01:27 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 09:21:00 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/21 02:24:08 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ const Dog& Dog::operator=(const Dog& dog){
 
     std::cout << "Copy assignment operator called(🐶)" << std::endl;
 
-    delete brain;
+    if (brain)
+        delete brain;
 
     brain = new Brain(*dog.brain);
     Type = dog.getType();

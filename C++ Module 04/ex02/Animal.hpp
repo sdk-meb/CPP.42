@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 09:58:39 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/20 10:00:09 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/21 02:29:18 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Animal{
     public:
         Animal(std::string type="Unknown");
         Animal(const Animal& animal);
-        virtual const Animal& operator=(const Animal& animal);
         void setType( std::string type );
         std::string getType() const;
         virtual void makeSound() const = 0;
