@@ -1,4 +1,4 @@
-NAME = Animal
+NAME = Bureaucrat
 
 CC = c++
 
