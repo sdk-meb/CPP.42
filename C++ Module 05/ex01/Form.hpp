@@ -17,28 +17,29 @@
 
 # include"Bureaucrat.hpp"
 
+
 class Form{
 
         const std::string Name;
-        bool            Signed;
-        short           Grade;
-        const  short    CGrade;
+        bool            Sign;
+        short const     SGrade;
+        short const     EGrade;
 
     public:
-        Form(const std::string name="UNAMED", const short cgrade=1);
-
+        Form(const std::string name="undef", short const Egrade=1, short const Sgrade=1);
+        Form(const Form& form);
 /**************    getters    **************/
         const std::string   getName()   const;
-        short               getGrade()  const;
-        bool                getSigned() const;
-        short               getCGrade() const;
+        short               getSGrade()  const;
+        bool                getSign() const;
+        short               getEGrade() const;
 
         std::ostream& operator<<( std::ostream out) const;
+        const Form&   operator=( const Form& form ) ;
         void    GradeTooHighException();
         void    GradeTooLowException();
 
         void    beSigned(Bureaucrat& bur);
-        void    signForm();
         ~Form();
 };
 

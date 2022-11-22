@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,58 +10,58 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include"Form.hpp"
+# include"AForm.hpp"
 
-Form::Form(const std::string name, short const sgrade, short const Egrade)
+AForm::AForm(const std::string name, short const sgrade, short const Egrade)
 :Name(name),SGrade(sgrade),EGrade(Egrade) { Sign = 0; }
-Form::Form(const Form& form): Name( form.getName()),
-                            SGrade( form.getSGrade()),
-                            EGrade( form.getEGrade()){
+AForm::AForm(const AForm& Aform): Name( Aform.getName()),
+                            SGrade( Aform.getSGrade()),
+                            EGrade( Aform.getEGrade()){
 
-    Sign = form.getSign();
+    Sign = Aform.getSign();
 }
 
 /**************    getters    **************/
-const std::string   Form::getName() const{
+const std::string   AForm::getName() const{
 
     return Name;
 }
-short               Form::getSGrade() const{
+short               AForm::getSGrade() const{
 
     return SGrade;
 }
-bool                Form::getSign() const{
+bool                AForm::getSign() const{
 
     return Sign;
 }
-short               Form::getEGrade() const{
+short               AForm::getEGrade() const{
 
     return  EGrade;
 }
 
-const Form& Form::operator=( const Form& form ){
+const AForm& AForm::operator=( const AForm& Aform ){
 
-    Sign = form.getSign();
+    Sign = Aform.getSign();
 
     return *this;
 }
-std::ostream& Form::operator<<( std::ostream out) const{
+std::ostream& AForm::operator<<( std::ostream out) const{
 
     return out  << Name << ", has " << EGrade << "grade required to execute " 
                 << " and " << SGrade << "grade required to sign it \n";
 }
-void    Form::GradeTooHighException(){
+void    AForm::GradeTooHighException(){
 
     if (SGrade == 1)
         throw   std::runtime_error("the Grade has totally HIGH");
 }
-void    Form::GradeTooLowException(){
+void    AForm::GradeTooLowException(){
 
     if (SGrade == 150)
         throw   std::runtime_error("the Grade has totally LOW");
 }
 
-void    Form::beSigned(Bureaucrat& bur){
+void    AForm::beSigned(Bureaucrat& bur){
 
     if (bur.getGrade() <= SGrade)
         Sign = 1;
@@ -69,7 +69,7 @@ void    Form::beSigned(Bureaucrat& bur){
         throw   std::runtime_error("the Grade has totally LOW");
 }
 
-Form::~Form(){
+AForm::~AForm(){
 
 }
 

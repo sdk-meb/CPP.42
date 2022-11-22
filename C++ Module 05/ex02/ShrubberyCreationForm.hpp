@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:55 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/21 18:02:02 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/22 13:32:22 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 # ifndef SHRUBBERY_HPP
 # define SHRUBBERY_HPP
 
-class ShrubberyCreationForm{
+# include"AForm.hpp"
+
+# include <fstream>
+
+class ShrubberyCreationForm : public AForm {
 
 
     public:
-        ShrubberyCreationForm(/* args */);
+        ShrubberyCreationForm(std::string name="");
         ~ShrubberyCreationForm();
 };
 

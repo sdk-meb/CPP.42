@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:55 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/21 09:33:18 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/22 12:10:35 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,27 @@
 class Bureaucrat{
 
     const std::string   Name;
-    short   Grade; 
+    short               Grade  ; 
 
     public:
         Bureaucrat(const std::string name="UNEMED", short grade=1);
-        const std::string getName() const;
-        short       getGrade() const;
+        const std::string   getName() const;
+        short             getGrade() const;
         std::ostream& operator<<( std::ostream out) const;
-        void    GradeTooHighException();
-        void    GradeTooLowException();
+
+        class    GradeTooHighException : public std::range_error{
+
+            public:
+            GradeTooHighException();//:range_error("the Grade has totally HIGH"){};
+        };
+        class    GradeTooLowException : public std::range_error{
+
+            public:
+            GradeTooLowException();//:range_error("the Grade has totally LOW"){};
+        };
+
+        void    incrementGrade();
+        void    decrementGrade();
 };
-
-
-
 
 # endif
