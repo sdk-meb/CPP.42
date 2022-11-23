@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:52 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/22 13:24:28 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/22 20:26:25 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,3 +67,9 @@ void    Bureaucrat::signAForm(const AForm& Aform){
                     << " because his grade not yet." << std::endl;
 }
 
+
+void    Bureaucrat::executeForm(AForm const & form){
+
+    form.execute(*this);
+    std::cout << this->Name << " executed " << form.getName();
+}

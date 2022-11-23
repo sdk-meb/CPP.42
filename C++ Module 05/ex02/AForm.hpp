@@ -30,8 +30,8 @@ class AForm{
         AForm(const AForm& Aform);
 /**************    getters    **************/
         const std::string   getName()   const;
-        short               getSGrade()  const;
-        bool                getSign() const;
+        short               getSGrade() const;
+        bool                getSign()   const;
         short               getEGrade() const;
 
         std::ostream& operator<<( std::ostream out) const;
@@ -39,12 +39,10 @@ class AForm{
         void    GradeTooHighException();
         void    GradeTooLowException();
 
-        virtual void    beSigned(Bureaucrat& bur) = 0;
+        void    beSigned(Bureaucrat& bur);
+        virtual void execute(Bureaucrat const & executor) const = 0;
         ~AForm();
 };
-
-
-
 
 
 #endif

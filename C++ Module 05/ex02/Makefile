@@ -6,7 +6,7 @@ RED = \033[0;31m
 GREEN = \033[0;32m
 NO_COLOR = \033[0m
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror#-std=c++98
 
 INC= '-I$(shell pwd)'
 

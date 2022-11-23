@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:58 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/22 13:23:32 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/22 20:27:03 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main(){
 
 
     try{
+        Bureaucrat ko;
+        
 
     }
     catch(const std::exception& e){
