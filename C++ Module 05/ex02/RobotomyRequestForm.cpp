@@ -3,39 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:55 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/22 20:19:23 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/23 12:29:21 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"RobotomyRequestForm.hpp"
 
 
-RobotomyRequestForm::RobotomyRequestForm( std::string target):AForm(target, 45, 72){}
+RobotomyRequestForm::RobotomyRequestForm( std::string target):AForm(target, 72, 45){}
+RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& robot):AForm(robot.getName(), 72, 45){
 
-RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& robot):AForm(robot.getName(), 45, 72){}
-
+    setSign(robot.getSign());
+}
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& robot){
 
-    robot.getEGrade();
+    setSign(robot.getSign());
     return *this;
 }
 
-
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const{
-    
-    if (getSign())
-    {
-        if (getEGrade() > executor.getGrade())
-            return ;
-        throw "PresidentialPardonForm is sine";
-    }
-    throw "PresidentialPardonForm is sine";
+
+    if (executor.getGrade() > getEGrade())
+		throw LowGrade();
+    if (getSign() == false)
+        throw IsnotSigned();
+    srand( time(NULL) );
+    if ( rand() % 2 )
+        throw  std::runtime_error ("!#@%$#!$% " + getName() + " robotomy failed" );
+    throw std::runtime_error ("!#@%$#!$% " + getName() + " has been robotomized successfull." );
 }
 
-RobotomyRequestForm::~RobotomyRequestForm()
-{
+RobotomyRequestForm::~RobotomyRequestForm(){
+
 }
 

@@ -13,13 +13,37 @@
 # include"AForm.hpp"
 
 AForm::AForm(const std::string name, short const sgrade, short const Egrade)
-:Name(name),SGrade(sgrade),EGrade(Egrade) { Sign = 0; }
+:Name(name),SGrade(sgrade),EGrade(Egrade) { Sign = false; }
 AForm::AForm(const AForm& Aform): Name( Aform.getName()),
                             SGrade( Aform.getSGrade()),
                             EGrade( Aform.getEGrade()){
 
     Sign = Aform.getSign();
 }
+
+/********************************************/
+
+const char* AForm::GradeTooHighException::what() const throw(){
+
+	return ("Grade Too High Exception.\n");
+}
+
+const char* AForm::GradeTooLowException::what() const throw(){
+
+	return ("Grade Too Low Exception.\n");
+}
+
+const char* AForm::LowGrade::what() const throw(){
+
+	return ("The execution/sign rating is insufficient.");
+}
+
+const char* AForm::IsnotSigned::what() const throw(){
+
+	return ("It's not signed");
+}
+
+
 
 /**************    getters    **************/
 const std::string   AForm::getName() const{
@@ -38,7 +62,10 @@ short               AForm::getEGrade() const{
 
     return  EGrade;
 }
+void                AForm::setSign(bool sign){
 
+    Sign = sign;
+}
 const AForm& AForm::operator=( const AForm& Aform ){
 
     Sign = Aform.getSign();
@@ -64,12 +91,11 @@ void    AForm::GradeTooLowException(){
 void    AForm::beSigned(Bureaucrat& bur){
 
     if (bur.getGrade() <= SGrade)
-        Sign = 1;
+        Sign = true;
     else
-        throw   std::runtime_error("the Grade has totally LOW");
+        throw   LowGrade();
 }
 
 AForm::~AForm(){
 
 }
-

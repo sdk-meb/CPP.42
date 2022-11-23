@@ -13,27 +13,26 @@
 # include"PresidentialPardonForm.hpp"
 
 
-PresidentialPardonForm::PresidentialPardonForm( std::string target):AForm(target, 45, 72){}
-PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& pres):AForm(pres.getName(), 45, 72){}
+PresidentialPardonForm::PresidentialPardonForm( std::string target):AForm(target, 25, 5){}
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& pres):AForm(pres.getName(), 25, 5){
 
+    setSign(pres.getSign());
+}
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& pres){
 
-    pres.getEGrade();
+    setSign(pres.getSign());
     return *this;
 }
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const{
     
-    if (getSign())
-    {
-        if (getEGrade() > executor.getGrade())
-            return ;
-        throw "PresidentialPardonForm is sine";
-    }
-    throw "PresidentialPardonForm is sine";
+    if (executor.getGrade() > getEGrade())
+		throw LowGrade();
+    if (getSign() == true)
+        throw std::runtime_error( getName() + " has been pardoned by Zaphod Beeblebrox.");
+    throw IsnotSigned();
 }
 
-PresidentialPardonForm::~PresidentialPardonForm()
-{
-}
+PresidentialPardonForm::~PresidentialPardonForm(){
 
+}

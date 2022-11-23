@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:52 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/22 20:26:25 by sdk-meb          ###   ########.fr       */
+/*   Updated: 2022/11/23 12:37:46 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void    Bureaucrat::decrementGrade(){
         throw Bureaucrat::GradeTooLowException();
 }
 
-
 Bureaucrat::GradeTooHighException::GradeTooHighException( ):range_error("the Grade has totally HIGH"){
     
 };
@@ -70,6 +69,13 @@ void    Bureaucrat::signAForm(const AForm& Aform){
 
 void    Bureaucrat::executeForm(AForm const & form){
 
-    form.execute(*this);
-    std::cout << this->Name << " executed " << form.getName();
+    try{
+        
+        form.execute(*this);
+        std::cout << this->Name << " executed " << form.getName() << std::endl;
+    }
+    catch ( std::exception& exc ){
+
+        std::cerr << exc.what() << "\n";        
+    }
 }

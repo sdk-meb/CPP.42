@@ -26,18 +26,35 @@ class AForm{
         short const     EGrade;
 
     public:
-        AForm(const std::string name="undef", short const Egrade=1, short const Sgrade=1);
+        AForm(const std::string name="undef", short const sgrade=1, short const grade=1);
         AForm(const AForm& Aform);
 /**************    getters    **************/
         const std::string   getName()   const;
         short               getSGrade() const;
         bool                getSign()   const;
         short               getEGrade() const;
-
+        void                setSign(bool sign);
         std::ostream& operator<<( std::ostream out) const;
         const AForm&   operator=( const AForm& Aform ) ;
         void    GradeTooHighException();
         void    GradeTooLowException();
+
+        class GradeTooHighException : public std::exception {
+	public:
+		const char* what(void) const throw();
+	};
+	class GradeTooLowException : public std::exception {
+	public:
+		const char* what(void) const throw();
+	};
+	class IsnotSigned : public std::exception {
+	public:
+		const char* what(void) const throw();
+	};
+	class LowGrade : public std::exception {
+	public:
+		const char* what(void) const throw();
+	};
 
         void    beSigned(Bureaucrat& bur);
         virtual void execute(Bureaucrat const & executor) const = 0;
