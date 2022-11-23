@@ -3,22 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:55 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/23 12:29:21 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:32:57 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"RobotomyRequestForm.hpp"
 
 
-RobotomyRequestForm::RobotomyRequestForm( std::string target):AForm(target, 72, 45){}
+RobotomyRequestForm::RobotomyRequestForm( std::string target):AForm(target, 72, 45){
+
+    std::cout << "default constructor (RobotomyRequestForm)" << std::endl;
+}
 RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& robot):AForm(robot.getName(), 72, 45){
 
+    std::cout << "copy constructor (RobotomyRequestForm)" << std::endl;
     setSign(robot.getSign());
 }
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& robot){
+
+    std::cout << "copy assignement operator (RobotomyRequestForm)" << std::endl;
 
     setSign(robot.getSign());
     return *this;
@@ -38,5 +44,6 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const{
 
 RobotomyRequestForm::~RobotomyRequestForm(){
 
+    std::cout << "destroy (RobotomyRequestForm)" << std::endl;
 }
 

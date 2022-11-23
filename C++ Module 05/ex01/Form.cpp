@@ -3,17 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:55 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/22 13:06:36 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:26:51 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Form.hpp"
 
 Form::Form(const std::string name, short const sgrade, short const Egrade)
-:Name(name),SGrade(sgrade),EGrade(Egrade) { Sign = 0; }
+:Name(name),SGrade(sgrade),EGrade(Egrade) { 
+    
+    std::cout << "default constructor (******)" << std::endl;
+    Sign = false;
+}
 Form::Form(const Form& form): Name( form.getName()),
                             SGrade( form.getSGrade()),
                             EGrade( form.getEGrade()){
@@ -71,5 +75,6 @@ void    Form::beSigned(Bureaucrat& bur){
 
 Form::~Form(){
 
+    std::cout << "default destructor (******)" << std::endl;
 }
 

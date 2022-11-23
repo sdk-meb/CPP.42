@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:52 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/23 14:30:03 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:23:23 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat(const std::string name, short grade):Name(name){
+
+    std::cout << "default constructor (******)" << std::endl;
 
     if (grade <= 150 && grade > 0)
         Grade = grade;

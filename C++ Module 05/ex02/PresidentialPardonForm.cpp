@@ -13,13 +13,19 @@
 # include"PresidentialPardonForm.hpp"
 
 
-PresidentialPardonForm::PresidentialPardonForm( std::string target):AForm(target, 25, 5){}
+PresidentialPardonForm::PresidentialPardonForm( std::string target):AForm(target, 25, 5){
+
+    std::cout << "default constructor (PresidentialPardonForm)" << std::endl;
+}
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& pres):AForm(pres.getName(), 25, 5){
 
+    std::cout << "copy constructor (PresidentialPardonForm)" << std::endl;
     setSign(pres.getSign());
 }
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& pres){
 
+
+    std::cout << "copy assignment operator (PresidentialPardonForm)" << std::endl;
     setSign(pres.getSign());
     return *this;
 }
@@ -35,4 +41,5 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const{
 
 PresidentialPardonForm::~PresidentialPardonForm(){
 
+    std::cout << "destroy (PresidentialPardonForm)" << std::endl;
 }

@@ -3,22 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sdk-meb <sdk-meb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:55 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/23 12:28:58 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:32:18 by sdk-meb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm( std::string target):AForm(target, 145, 137){}
+ShrubberyCreationForm::ShrubberyCreationForm( std::string target):AForm(target, 145, 137){
+
+    std::cout << "default constructor (ShrubberyCreationForm)" << std::endl;
+}
 ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& shru):AForm(shru.getName(), 145, 137){
 
+
+    std::cout << "copy constructor (ShrubberyCreationForm)" << std::endl;
     setSign(shru.getSign());
 }
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& shru){
 
+
+    std::cout << "copy assignment operator (ShrubberyCreationForm)" << std::endl;
     setSign(shru.getSign()) ;
     return *this;
 }
@@ -70,4 +77,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const{
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){
 
+
+    std::cout << "destroy (ShrubberyCreationForm)" << std::endl;
 }

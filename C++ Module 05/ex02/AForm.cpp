@@ -13,11 +13,16 @@
 # include"AForm.hpp"
 
 AForm::AForm(const std::string name, short const sgrade, short const Egrade)
-:Name(name),SGrade(sgrade),EGrade(Egrade) { Sign = false; }
+:Name(name),SGrade(sgrade),EGrade(Egrade) {
+    
+    std::cout << "default constructor (******)" << std::endl;
+    Sign = false;
+}
 AForm::AForm(const AForm& Aform): Name( Aform.getName()),
                             SGrade( Aform.getSGrade()),
                             EGrade( Aform.getEGrade()){
 
+    std::cout << "copy constructor (******)" << std::endl;
     Sign = Aform.getSign();
 }
 
@@ -68,6 +73,8 @@ void                AForm::setSign(bool sign){
 }
 const AForm& AForm::operator=( const AForm& Aform ){
 
+
+    std::cout << " copy assignment  operetot (******)" << std::endl;
     Sign = Aform.getSign();
 
     return *this;
@@ -98,4 +105,5 @@ void    AForm::beSigned(Bureaucrat& bur){
 
 AForm::~AForm(){
 
+    std::cout << "default destructor (******)" << std::endl;
 }
