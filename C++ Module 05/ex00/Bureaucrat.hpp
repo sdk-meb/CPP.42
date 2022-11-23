@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:55 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/22 12:10:35 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:26:36 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ class Bureaucrat{
         class    GradeTooHighException : public std::range_error{
 
             public:
-            GradeTooHighException();//:range_error("the Grade has totally HIGH"){};
+            GradeTooHighException();
         };
         class    GradeTooLowException : public std::range_error{
 
             public:
-            GradeTooLowException();//:range_error("the Grade has totally LOW"){};
+            GradeTooLowException();
         };
 
         void    incrementGrade();

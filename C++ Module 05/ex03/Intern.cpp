@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:11:39 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/23 13:44:27 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:17:10 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int Intern::check_name(std::string name){
     do{
         switch (name.compare( lvls[i] ))
         {
-            case true:
+            case false:
                 return (i);
             default:
                 break;

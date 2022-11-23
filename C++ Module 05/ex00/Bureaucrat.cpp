@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:52 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/22 12:15:06 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:30:03 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,8 @@ void    Bureaucrat::decrementGrade(){
 }
 
 
-Bureaucrat::GradeTooHighException::GradeTooHighException( ):range_error("the Grade has totally HIGH"){
-    
-};
-Bureaucrat::GradeTooLowException::GradeTooLowException( ):range_error("the Grade has totally LOW"){
-    
-};
+Bureaucrat::GradeTooHighException::GradeTooHighException( )
+:range_error("the Grade has totally HIGH"){     };
+
+Bureaucrat::GradeTooLowException::GradeTooLowException( )
+:range_error("the Grade has totally LOW"){      };

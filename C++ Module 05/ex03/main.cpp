@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 08:21:58 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/23 12:39:09 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:25:54 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include"PresidentialPardonForm.hpp"
 # include"ShrubberyCreationForm.hpp"
 # include"RobotomyRequestForm.hpp"
+# include"Intern.hpp"
 
 bool tts;
 
@@ -31,46 +32,53 @@ void    out_test(){
 
 int main(){
 
-
-    try{    
+    Intern intern;
+    AForm*   form;
+    
+    try{
         Bureaucrat bur("meb", 25);
-        PresidentialPardonForm   form("lloi");// s(25), e(5)
-        form.beSigned(bur);
-        while (bur.getGrade() >= 5)
-            bur.incrementGrade();
 
-        bur.executeForm(form);
-        
-        
-                                                                            tts = true;}
-    catch(const std::exception& e){std::cerr << e.what() << '\n';  /****/   tts = false;}
-                                                                            out_test();
-    try{    
-        Bureaucrat bur("meb", 73);
-        RobotomyRequestForm   form("lloi");// s(72), e(45)
-        form.beSigned(bur);
-        while (bur.getGrade() >= 5)
-            bur.incrementGrade();
+        try{    
+            form = intern.makeForm ("presidential pardon", "pres");// s(25), e(5)
 
-        bur.executeForm(form);
-        
-        
-                                                                            tts = true;}
-    catch(const std::exception& e){std::cerr << e.what() << '\n';  /****/   tts = false;}
-                                                                            out_test();
-    try{    
-        Bureaucrat bur("meb", 130);
-        ShrubberyCreationForm   form("lloi");// s(145), e(137)
-        form.beSigned(bur);
-        while (bur.getGrade() >= 5)
-            bur.incrementGrade();
+            form->beSigned(bur);
+            while (bur.getGrade() >= 5)
+                bur.incrementGrade();
 
-        bur.executeForm(form);
-        
-        
-                                                                            tts = true;}
-    catch(const std::exception& e){std::cerr << e.what() << '\n';  /****/   tts = false;}
-                                                                            out_test();
+            bur.executeForm(*form);
+
+                                                                        tts = true;}
+        catch(const std::exception& e){std::cerr << e.what() << '\n';   tts = false;}
+                                                                        out_test();delete form;
+
+        try{
+            form = intern.makeForm ("robotomy request", "robo");// s(72), e(45)
+
+            form->beSigned(bur);
+            while (bur.getGrade() >= 5)
+                bur.incrementGrade();
+            bur.executeForm(*form);   
+
+                                                                    tts = true;}
+        catch(const std::exception& e){std::cerr << e.what() << '\n';   tts = false;}
+                                                                    out_test();delete form;
+
+        try{
+            form = intern.makeForm ("shrubbery creation", "shru");// s(145), e(137)
+
+            form->beSigned(bur);
+            while (bur.getGrade() >= 5)
+                bur.incrementGrade();
+
+            bur.executeForm(*form);
+
+                                                                    tts = true;}
+        catch(const std::exception& e){std::cerr << e.what() << '\n';   tts = false;}
+                                                                    out_test();delete form;
+    }
+    catch(const std::exception& e){
+        std::cerr << e.what() << '\n';
+    }
 
     return 0;
 }

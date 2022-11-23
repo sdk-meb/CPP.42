@@ -10,11 +10,11 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 INC= '-I$(shell pwd)'
 
-SRC_FILES = $(shell ls *.cpp)
+SRC_FILES = Bureaucrat.cpp    main.cpp
 
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp  $(shell ls *.hpp)
+%.opp:%.cpp   Bureaucrat.hpp    
 	@${CC} ${CFLAGS} ${INC} -o $@ -c $<
 
 all: ${NAME}

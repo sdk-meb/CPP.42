@@ -58,7 +58,7 @@ class AForm{
 
         void    beSigned(Bureaucrat& bur);
         virtual void execute(Bureaucrat const & executor) const = 0;
-        ~AForm();
+        virtual ~AForm();
 };
 
 
