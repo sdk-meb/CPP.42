@@ -6,7 +6,7 @@
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 19:00:43 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/24 21:00:46 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:13:10 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 bool    check_ppf( std::string str ){
 
-    for (size_t i = str.find('.') + 1; i <= str.size() && std::isdigit(str[i]) ; i++){
+    for (size_t i = str.find('.') + 1; i - 1 <= str.size() && std::isdigit(str[i]) ; i++){
 
         if ( str[i] != '0')
             return true;
@@ -41,23 +41,29 @@ void    convert( std::string str ){
     }
 
     try{
+        float   fl = std::stof( str );
 
-        std::cout   << "float: " << (std::stof( str ))
-                    << ( str.find('.') <= (str.size() ) && check_ppf( str ) ? "f" :  ".0f")
+        std::cout   << "float: " << fl
+                    <<  ( ( isnan(fl) || fl == INFF || fl == nINFF ) ? "f": \
+                    (  check_ppf( str ) ? "f" :  ".0f" ))
                     << std::endl;
     }
     catch ( const std::exception& exc){
 
-        std::cerr   << "nanf" << std::endl;
+        std::cerr   << "float: impossible" << std::endl;
     }
 
     try{
-         std::cout  << "double: " << (std::stod( str ))
-                    << ( str.find('.') <= (str.size() ) && check_ppf( str ) ? "" :  ".0")
+        double db = std::stod( str );
+        
+         std::cout  << "double: " << db
+                    <<  ( ( isnan(db) || db == INF || db == nINF ) ? "": \
+                    (  check_ppf( str ) ? "f" :  ".0f" ))
                     <<  std::endl;
     }
     catch ( const std::exception& exc){
 
-        std::cerr   << "nan" << std::endl;
+        std::cerr   << "double: impossible" << std::endl;
     }
 }
+

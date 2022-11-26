@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cast_util.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:59:27 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/25 10:12:42 by mes-sadk         ###   ########.fr       */
+/*   Created: 2022/11/20 10:17:32 by mes-sadk          #+#    #+#             */
+/*   Updated: 2022/11/26 08:57:09 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAST_UTIL_HPP
-# define    CAST_UTIL_HPP
+# include"Ident.hpp"
 
-# include<iostream>
-# include<cstdlib>
-# include<cmath>
+int main(){
 
-void    convert( std::string str );
-
-# define INFF   std::numeric_limits<float>::infinity()
-# define INF    std::numeric_limits<double>::infinity()
-# define nINFF  -std::numeric_limits<float>::infinity()
-# define nINF   -std::numeric_limits<double>::infinity()
-
-
-# endif
+    Base *o = generate( );
+    std::cout << "gener -> identify(POINTER)\n";
+    identify( o);
+    std::cout << "gener -> identify(ref)\n";
+    identify( *o);
+    return 0;
+}

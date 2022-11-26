@@ -1,28 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cast_util.hpp                                      :+:      :+:    :+:   */
+/*   Ident.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:59:27 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/25 10:12:42 by mes-sadk         ###   ########.fr       */
+/*   Updated: 2022/11/26 09:00:14 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAST_UTIL_HPP
-# define    CAST_UTIL_HPP
+#ifndef IDENT_HPP
+# define    IDENT_HPP
 
 # include<iostream>
-# include<cstdlib>
-# include<cmath>
 
-void    convert( std::string str );
+class Base{
 
-# define INFF   std::numeric_limits<float>::infinity()
-# define INF    std::numeric_limits<double>::infinity()
-# define nINFF  -std::numeric_limits<float>::infinity()
-# define nINF   -std::numeric_limits<double>::infinity()
+    public:
+
+        virtual    ~Base(){};
+};
+
+Base*    generate( );
+void    identify(Base* p);
+void    identify(Base& p);
+
+class A: public Base{
+
+    public:
+        ~A(){};
+};
+class B: public Base{
+
+    public:
+        ~B(){};
+};
+
+class C: public Base{
+
+    public:
+        ~C(){};
+};
 
 
 # endif

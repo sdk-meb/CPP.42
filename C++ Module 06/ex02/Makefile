@@ -1,4 +1,4 @@
-NAME = cast
+NAME = dynamic_cast
 
 CC = c++
 
@@ -6,14 +6,14 @@ RED = \033[0;31m
 GREEN = \033[0;32m
 NO_COLOR = \033[0m
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 
-SRC_FILES = main.cpp cast_util.cpp
+SRC_FILES = main.cpp Ident.cpp
 
 OBJ_FILES = $(SRC_FILES:.cpp=.opp)
 
-%.opp:%.cpp cast_util.hpp
+%.opp:%.cpp Ident.hpp
 	@${CC} ${CFLAGS}  -o $@ -c $<
 
 all: ${NAME}
