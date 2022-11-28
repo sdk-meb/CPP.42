@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mes-sadk <mes-sadk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 10:41:25 by mes-sadk          #+#    #+#             */
-/*   Updated: 2022/11/26 21:30:27 by mes-sadk         ###   ########.fr       */
+/*   Created: 2022/11/26 10:09:42 by mes-sadk          #+#    #+#             */
+/*   Updated: 2022/11/27 14:32:08 by mes-sadk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-# define ITER_HPP
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
 # include<iostream>
-
-
-template <typename T>
-void    iter(T array[], unsigned int lenth, void(*fun)(T  &)){
-
-    for (unsigned int idx= 0; idx < lenth; idx++){
-            fun(array[idx]);
-    }
-}
-template <typename T>
-void    iter(T array[], unsigned int lenth, void(*fun)(T const  &)){
-
-    for (unsigned int idx= 0; idx < lenth; idx++){
-            fun(array[idx]);
-    }
-}
+# include<algorithm>
+# include<utility>
 
 template <typename T>
-void div_2(T  &a)
-{
-    a /= 2;
-}
+typename T::iterator    easyfind(T& one, int i){
 
-#endif
+   
+    typename T::iterator it = one.begin();
+ 
+    it = std::find(it, one.end(), i);
+    if (it == one.end())
+        throw std::runtime_error("No occurrence is found.");
+   return  it;
+};
+
+# endif
